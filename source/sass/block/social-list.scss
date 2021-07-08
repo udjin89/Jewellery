@@ -1,0 +1,11 @@
+.social-list {
+  @include mobile {
+    display: flex;
+  }
+}
+
+.social-list span {
+  @include mobile {
+    display: none;
+  }
+}

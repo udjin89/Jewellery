@@ -1,0 +1,26 @@
+.faq {
+  padding-top: 100px;
+  padding-bottom: 108px;
+}
+
+.faq h2 {
+  margin: 0;
+  padding: 0;
+  @include title;
+  font-size: 34px;
+  line-height: 130%;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+.faq__list {
+  margin: 60px auto 0 auto;
+  padding: 0;
+  max-width: 970px;
+  list-style: none;
+  border: 1px solid $brown;
+
+  @include tablet {
+    max-width: 100%;
+  }
+}

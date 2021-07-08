@@ -1,0 +1,21 @@
+.email-field {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid $white;
+}
+
+.email-field input {
+  flex-grow: 1;
+  border: none;
+  background-color: transparent;
+  color: $white;
+}
+
+.email-field input::placeholder {
+
+  letter-spacing: 0.7px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  color: #9B9997;
+}

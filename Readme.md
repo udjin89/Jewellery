@@ -1,4 +1,4 @@
-# проектb Jewellery
+# проект Jewellery
 
 - __Установка__: npm install
 - __Запуск сборки и сервера__: npm start

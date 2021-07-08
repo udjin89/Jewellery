@@ -1,0 +1,101 @@
+.accordion__item {
+  border-bottom: 1px solid $brown;
+  // padding-left: 38px;
+
+  &:last-of-type {
+    border: none;
+
+  }
+}
+
+.accordion__item p {
+  margin: 0;
+  padding: 0 410px 50px 38px;
+  display: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+
+  // position: absolute;
+  // height: 0;
+  // opacity: 0;
+  // overflow: hidden;
+  // transition: all 0.5s ease-in-out;
+  @include tablet {
+    padding: 0 80px 50px 50px;
+  }
+
+  @include mobile {
+    padding: 0 60px 24px 25px;
+    font-size: 14px;
+    line-height: 140%;
+  }
+}
+
+.accordion__item h3 {
+  margin: 0;
+  padding: 50px 0 50px 38px;
+  font-size: 18px;
+  line-height: 130%;
+
+  position: relative;
+  cursor: pointer;
+  // transition: all 0.5s ease-in-out;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    right: 50px;
+    height: 16px;
+    width: 1px;
+    background-color: $brown;
+
+  }
+
+  &::before {
+
+    transform: translate(-11px, -50%) rotate(-45deg);
+  }
+
+  &::after {
+
+    transform: translate(0, -50%) rotate(45deg);
+  }
+
+  @include tablet {
+    padding: 50px 0 50px 50px;
+  }
+
+  @include mobile {
+    padding: 25px 60px 25px 25px;
+    font-size: 16px;
+    line-height: 140%;
+
+    &::before,
+    &::after {
+      right: 26px;
+    }
+  }
+}
+
+.accordion__item--active h3 {
+  padding-bottom: 20px;
+
+  &::before {
+    transform: translate(-11px, -50%) rotate(45deg);
+  }
+
+  &::after {
+    transform: translate(0, -50%) rotate(-45deg);
+  }
+
+  @include tablet {
+    padding-bottom: 35px;
+  }
+
+  @include tablet {
+    padding-bottom: 25px;
+  }
+}

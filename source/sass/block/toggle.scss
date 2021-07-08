@@ -1,6 +1,7 @@
 .toggle {
   display: none;
   z-index: 5;
+  cursor: pointer;
 
   @include tablet {
     position: absolute;
