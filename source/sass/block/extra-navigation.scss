@@ -1,0 +1,18 @@
+.extra-navigation {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: none;
+}
+
+.extra-navigation .extra-navigation__item {
+  margin-bottom: 10px;
+}
+
+.extra-navigation__link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 130%;
+  color: rgba($white, 0.75);
+  text-decoration: none;
+}

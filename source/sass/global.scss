@@ -23,24 +23,17 @@ img {
 
 .container {
   position: relative;
-  max-width: 1170px;
+  max-width: 1190px;
   margin: 0 auto;
+  padding: 0 10px;
 
   @include tablet {
     max-width: 768px;
-    padding: 0 89px;
+    padding: 0 44px;
   }
 
   @include mobile {
-    padding: 0 15px;
-  }
-
-  &--facts {
-    max-width: 1200px;
-  }
-
-  &--types {
-    padding: 0 5px;
+    padding: 0 14px;
   }
 }
 
@@ -65,6 +58,14 @@ img {
   min-height: 100%;
   margin: 0;
   padding: 0;
+
+  font-family: "Poppins", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
+  color: $black;
+
 }
 
 .page__body {

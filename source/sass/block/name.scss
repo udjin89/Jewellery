@@ -1,0 +1,60 @@
+.name {
+  position: relative;
+  margin-top: 20px;
+  padding-top: 195px;
+  height: 463px;
+
+  background-image: url("../img/background/main.jpg");
+  background-repeat: no-repeat;
+  // background-position-x: center;
+  background-size: cover;
+
+  @include retina {
+    background-image: url("../img/background/main@2x.jpg");
+  }
+
+  @include tablet {
+    // min-height: 0;
+    // padding-bottom: 160px;
+    background-image: url("../img/background/main-tablet.jpg");
+    background-position-x: center;
+
+    @include retina {
+      background-image: url("../img/background/main-tablet@2x.jpg");
+    }
+  }
+
+  @include mobile {
+    // padding-bottom: 73px;
+    background-image: url("../img/background/main-mobile.jpg");
+
+    @include retina {
+      background-image: url("../img/background/main-mobile@2x.jpg");
+    }
+  }
+}
+
+.name h1,
+.name p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: $white;
+}
+
+.name h1 {
+  @include title;
+  font-size: 45px;
+  // line-height: 130%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.name p {
+  font-family: "CormorantGaramond", "Arial", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 38px;
+  margin-top: 18px;
+  // line-height: 130%;
+}

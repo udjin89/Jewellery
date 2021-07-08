@@ -1,0 +1,15 @@
+.logo {
+  margin-left: -40px;
+  color: $brown;
+
+  @include tablet {
+    margin-left: 0;
+  }
+}
+
+.logo svg {
+  @include mobile {
+    width: 52px;
+    height: 52px;
+  }
+}
