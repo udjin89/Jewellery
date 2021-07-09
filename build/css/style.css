@@ -582,10 +582,11 @@ img {
 @media screen and (max-width: 1023.33px) {
   .footer__grid form {
     width: 100%;
-    max-width: 560px; } }
+    padding-right: 118px; } }
 
 @media screen and (max-width: 767.66px) {
   .footer__grid form {
+    padding-right: 0;
     max-width: 100%; } }
 
 .logo {
@@ -855,3 +856,128 @@ img {
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
     .modal--login {
       background-image: url("../img/background/login-bg@2x.jpg"); } }
+
+.link {
+  display: block;
+  margin: 0 auto;
+  color: #1d1613;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  border-bottom: 1px solid #a87b62; }
+  .link--article {
+    width: 97px; }
+  .link--blog {
+    width: 76px; }
+
+.blog h2 {
+  font-family: "CormorantGaramond", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 130%;
+  text-align: center;
+  letter-spacing: 0.03em; }
+
+.blog__grid {
+  margin-top: 60px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-row-gap: 30px;
+  grid-column-gap: 30px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 300px 300px; }
+  @media screen and (max-width: 1023.33px) {
+    .blog__grid {
+      grid-auto-flow: row;
+      grid-template-columns: 1fr;
+      grid-template-rows: 300px;
+      grid-row-gap: 50px; } }
+  @media screen and (max-width: 767.66px) {
+    .blog__grid {
+      grid-row-gap: 40px;
+      grid-template-rows: auto; } }
+
+.blog__article {
+  background-color: pink;
+  background-repeat: no-repeat; }
+  @media screen and (max-width: 767.66px) {
+    .blog__article {
+      height: 512px;
+      padding-top: 256px; } }
+  .blog__article--blog-care {
+    background-image: url("../img/content/jess-harper-sunday-blog-care-desktop.jpg"); }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+      .blog__article--blog-care {
+        background-image: url("../img/content/jess-harper-sunday-blog-care-desktop@2x.jpg"); } }
+  .blog__article--blog-power {
+    background-image: url("../img/content/alex-holyoake-unsplash-blog-power-desktop.jpg"); }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+      .blog__article--blog-power {
+        background-image: url("../img/content/alex-holyoake-unsplash-blog-power-desktop@2x.jpg"); } }
+  .blog__article--blog-trends {
+    background-image: url("../img/content/alve-odonnell-unsplash-blog-trends-desktop.jpg"); }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+      .blog__article--blog-trends {
+        background-image: url("../img/content/alve-odonnell-unsplash-blog-trends-desktop@2x.jpg"); } }
+
+.blog__article p {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 130%;
+  text-align: center;
+  color: #9b9997; }
+
+.blog__article h3 {
+  margin: 0;
+  margin-top: 25px;
+  margin-bottom: 50px;
+  padding: 0;
+  font-family: "CormorantGaramond", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 130%;
+  text-align: center; }
+
+.blog__article:nth-child(3n) {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3; }
+  @media screen and (max-width: 1023.33px) {
+    .blog__article:nth-child(3n) {
+      grid-column: auto;
+      grid-row: auto; } }
+
+.blog__article-description {
+  padding-top: 71px;
+  width: 50%;
+  height: 300px;
+  margin-left: auto;
+  background-color: #f0eae4; }
+  @media screen and (max-width: 767.66px) {
+    .blog__article-description {
+      padding-top: 49px;
+      width: 100%;
+      height: 256px;
+      margin-left: 0; } }
+
+.blog__article:nth-child(3n) .blog__article-description {
+  margin-top: 330px; }
+  @media screen and (max-width: 1023.33px) {
+    .blog__article:nth-child(3n) .blog__article-description {
+      margin-top: 0; } }
+
+@media screen and (max-width: 1023.33px) {
+  .blog__article:nth-child(2n) .blog__article-description {
+    margin-left: 0;
+    margin-right: auto; } }
+
+@media screen and (max-width: 767.66px) {
+  .blog__article:nth-child(2n) .blog__article-description {
+    margin-right: 0; } }

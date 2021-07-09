@@ -90,10 +90,12 @@
 .footer__grid form {
   @include tablet {
     width: 100%;
-    max-width: 560px;
+    padding-right: 118px;
+    // max-width: 560px;
   }
 
   @include mobile {
+    padding-right: 0;
     max-width: 100%;
   }
 }
