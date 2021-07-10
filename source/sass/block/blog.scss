@@ -46,7 +46,11 @@
     }
 
     @include tablet {
-      // background-size: 50%;
+      background-size: 50% 300px;
+    }
+
+    @include mobile {
+      background-size: 100% 256px;
     }
   }
 
@@ -56,6 +60,15 @@
     @include retina {
       background-image: url("../img/content/alex-holyoake-unsplash-blog-power-desktop@2x.jpg");
     }
+
+    @include tablet {
+      background-size: 50% 300px;
+      background-position-x: right;
+    }
+
+    @include mobile {
+      background-size: 100% 256px;
+    }
   }
 
   &--blog-trends {
@@ -63,6 +76,15 @@
 
     @include retina {
       background-image: url("../img/content/alve-odonnell-unsplash-blog-trends-desktop@2x.jpg");
+    }
+
+    @include mobile {
+      background-size: 100% 256px;
+      background-image: url("../img/content/alve-odonnell-blog-trends-mobile.jpg");
+
+      @include retina {
+        background-image: url("../img/content/alve-odonnell-blog-trends-mobile@2x.jpg");
+      }
     }
   }
 }
