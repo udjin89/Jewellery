@@ -1,7 +1,8 @@
 
 const accordion = document.querySelector('.accordion');
-const accordionItems = accordion.querySelectorAll('.accordion__item');
+
 if (accordion) {
+  const accordionItems = accordion.querySelectorAll('.accordion__item');
   const panelItem = accordion.querySelectorAll('h3');
   const active = accordion.getElementsByClassName('panel-active');
   const activeItem = accordion.getElementsByClassName('accordion__item--active');
@@ -22,9 +23,6 @@ if (accordion) {
       }
       // изменить состояние класса panel-active на текущем элементе: добавить если не было, убрать если было.
       this.classList.toggle('panel-active');
-      // убрать класс panel-active
-
-      // изменить состояние класса panel-active на текущем элементе: добавить если не было, убрать если было.
       this.parentNode.classList.toggle('accordion__item--active');
     });
   });
@@ -44,7 +42,7 @@ const menu = document.querySelector('.menu');
 const menuNav = document.querySelector('.navigation');
 const body = document.querySelector('.page__body');
 
-// // No-js menu
+// No-js menu
 header.classList.remove('header--open');
 if (menu) {
   menu.classList.remove('menu--open');
@@ -135,41 +133,100 @@ function getBodyScrollTop() {
 }
 
 // Smooth scroll
-const links = document.querySelectorAll('a[href^="#"]');
-if (links) {
-  for (let link of links) {
-    link.addEventListener('click', function (evt) {
-      evt.preventDefault();
-      const id = link.getAttribute('href');
-      closeMenu();
-      document.querySelector(id).scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      });
-    });
-  };
-}
+// const links = document.querySelectorAll('a[href^="#"]');
+// if (links) {
+//   for (let link of links) {
+//     link.addEventListener('click', function (evt) {
+//       evt.preventDefault();
+//       const id = link.getAttribute('href');
+//       closeMenu();
+//       document.querySelector(id).scrollIntoView({
+//         behavior: 'smooth',
+//         block: 'start'
+//       });
+//     });
+//   };
+// }
 
 const swiper = new Swiper('.swiper-container', {
   speed: 400,
-  spaceBetween: 30,
+  observer: true,
+  observeParents: true,
+  // spaceBetween: 30,
   loop: true,
-  slidesPerView: 4,
-  slidesPerGroup: 4,
+  // slidesPerView: 4,
+  // slidesPerGroup: 4,
 
   // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-    type: 'bullets',
-    clickable: true,
-    renderBullet: function (index, className) {
-      return '<span class="' + className + '"> ' + (index + 1) + '</span>';
-    },
-  },
+  // pagination: {
+  //   el: '.swiper-pagination',
+  //   clickable: true,
+  //   type: 'bullets',
+  //   renderBullet: function (index, className) {
+  //     return '<span class="' + className + '"> ' + (index + 1) + '</span>';
+  //   },
+  // },
 
   // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+  breakpoints: {
+    // when window width is >= 320px
+    100: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 30,
+      allowTouchMove: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        type: 'custom',
+        renderCustom: function (swiper, current, total) {
+          return current + ' of ' + (total);
+        }
+      },
+    },
+    768: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 30,
+      allowTouchMove: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        type: 'bullets',
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '"> ' + (index + 1) + '</span>';
+        },
+      },
+    },
+    // when window width is >= 640px
+    1024: {
+      slidesPerView: 4,
+      slidesPerGroup: 4,
+      spaceBetween: 30,
+      allowTouchMove: false,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        type: 'bullets',
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '"> ' + (index + 1) + '</span>';
+        },
+      },
+    }
+  },
 });
+
+window.addEventListener(`resize`, event => {
+  if (screen.width < 1024) {
+    console.log("Size Window =" + screen.width);
+    swiper.pagination.destroy();
+    // console.log("destroy");
+    swiper.pagination.update();
+    swiper.pagination.render();
+    // console.log("update");
+  }
+}, false);

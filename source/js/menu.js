@@ -4,7 +4,7 @@ const menu = document.querySelector('.menu');
 const menuNav = document.querySelector('.navigation');
 const body = document.querySelector('.page__body');
 
-// // No-js menu
+// No-js menu
 header.classList.remove('header--open');
 if (menu) {
   menu.classList.remove('menu--open');

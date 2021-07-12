@@ -26,7 +26,10 @@
 
 
 .navigation--open .navigation__list {
-  display: block;
+  @include tablet {
+    display: block;
+  }
+
 }
 
 .navigation--open .navigation__item {
@@ -44,8 +47,10 @@
 }
 
 .navigation--open .navigation__link {
+  @include tablet {
+    font-size: 24px;
+    line-height: 36px;
+    color: $white;
+  }
 
-  font-size: 24px;
-  line-height: 36px;
-  color: $white;
 }

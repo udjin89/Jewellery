@@ -22,6 +22,7 @@
 .menu--open .extra-navigation {
   @include tablet {
     display: block;
+    z-index: 100;
   }
 }
 

@@ -1,7 +1,8 @@
 
 const accordion = document.querySelector('.accordion');
-const accordionItems = accordion.querySelectorAll('.accordion__item');
+
 if (accordion) {
+  const accordionItems = accordion.querySelectorAll('.accordion__item');
   const panelItem = accordion.querySelectorAll('h3');
   const active = accordion.getElementsByClassName('panel-active');
   const activeItem = accordion.getElementsByClassName('accordion__item--active');
@@ -22,9 +23,6 @@ if (accordion) {
       }
       // изменить состояние класса panel-active на текущем элементе: добавить если не было, убрать если было.
       this.classList.toggle('panel-active');
-      // убрать класс panel-active
-
-      // изменить состояние класса panel-active на текущем элементе: добавить если не было, убрать если было.
       this.parentNode.classList.toggle('accordion__item--active');
     });
   });
