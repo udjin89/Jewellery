@@ -1,0 +1,93 @@
+.catalog {}
+
+.catalog form {
+  margin-right: 50px;
+  width: 250px;
+  height: min-content;
+  border: 1px solid $brown;
+}
+
+.catalog__grid {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cataglog__product-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.cataglog__product-item {
+  max-width: 270px;
+  margin-right: 5px;
+}
+
+.catalog__option-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.catalog__option-list h3 {
+  position: relative;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 130%;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    right: 50px;
+    height: 16px;
+    width: 1px;
+    background-color: $brown;
+  }
+
+  &::before {
+
+    transform: translate(-11px, -50%) rotate(-45deg);
+  }
+
+  &::after {
+
+    transform: translate(0, -50%) rotate(45deg);
+  }
+}
+
+.catalog__item {
+
+  border-bottom: 1px solid $brown;
+
+}
+
+.catalog__checkbox {
+  position: relative;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 130%;
+  padding-left: 40px;
+  margin-top: 11px;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    color: $brown;
+    opacity: 0.8;
+  }
+
+  @include tablet {}
+
+  @include mobile {}
+}

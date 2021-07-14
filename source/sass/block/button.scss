@@ -50,3 +50,11 @@
   color: $white;
   background-color: $brown;
 }
+
+.button--filter {
+  display: none;
+
+  @include tablet {
+    display: block;
+  }
+}

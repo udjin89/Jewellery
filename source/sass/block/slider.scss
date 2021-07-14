@@ -1,13 +1,16 @@
 .swiper-container {
+  margin-top: -100px;
   // width: 1170px;
+  // max-width: 1170px;
   width: 100%;
+  // min-width: 200px;
 
   @include tablet {
-    width: 680px;
+    // width: 680px;
   }
 
   @include mobile {
-    width: 290px;
+    // width: 290px;
   }
 }
 
@@ -61,6 +64,7 @@
   background-image: url("../img/icon/arrow-slider.svg");
   background-repeat: no-repeat;
   background-position: center;
+  cursor: pointer;
 
   @include mobile {
     display: none;

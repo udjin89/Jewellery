@@ -1,4 +1,5 @@
 .product-card {
+  display: block;
   text-decoration: none;
   color: $black;
 }
@@ -19,11 +20,30 @@
 }
 
 .product-card img {
-  width: minmax(200px, 100%);
+  // width: minmax(200px, 100%);
+  width: 100%;
 
   @include tablet {
     width: 324px;
     height: 340px;
+  }
+
+  @include mobile {
+    width: 130px;
+    height: 136px;
+  }
+}
+
+.product-card--catalog {}
+
+.product-card--catalog img {
+  width: 270px;
+  height: 272px;
+  // object-fit: scale-down;
+
+  @include tablet {
+    width: 206px;
+    height: 208px;
   }
 
   @include mobile {
