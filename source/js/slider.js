@@ -84,13 +84,11 @@ const swiper = new Swiper('.swiper-container', {
   },
 });
 
+
 window.addEventListener(`resize`, event => {
   if (screen.width < 1024) {
-    console.log("Size Window =" + screen.width);
     swiper.pagination.destroy();
-    // console.log("destroy");
     swiper.pagination.update();
     swiper.pagination.render();
-    // console.log("update");
   }
 }, false);

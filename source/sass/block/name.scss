@@ -32,6 +32,36 @@
       background-image: url("../img/background/main-mobile@2x.jpg");
     }
   }
+
+  &--catalog {
+    background-image: url("../img/background/catalog.jpg");
+    background-repeat: no-repeat;
+
+    background-size: cover;
+
+    @include retina {
+      background-image: url("../img/background/catalog@2x.jpg");
+    }
+
+    @include tablet {
+
+      background-image: url("../img/background/catalog.jpg");
+      background-position-x: center;
+
+      @include retina {
+        background-image: url("../img/background/catalog@2x.jpg");
+      }
+    }
+
+    @include mobile {
+
+      background-image: url("../img/background/catalog.jpg");
+
+      @include retina {
+        background-image: url("../img/background/catalog@2x.jpg");
+      }
+    }
+  }
 }
 
 .name h1,
@@ -57,4 +87,14 @@
   font-size: 38px;
   margin-top: 18px;
   // line-height: 130%;
+}
+
+.name--catalog h1 {
+  font-size: 34px;
+
+}
+
+.name--catalog p {
+
+  font-size: 22px;
 }

@@ -5,4 +5,8 @@
   height: 100vh;
   width: 100%;
   background: rgba($black, 0.5);
+
+  &--white {
+    background: rgba($white, 0.9);
+  }
 }

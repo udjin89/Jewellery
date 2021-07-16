@@ -28,6 +28,53 @@ if (accordion) {
   });
 }
 
+const catalog = document.querySelector('.catalog');
+if (catalog) {
+  const optionList = catalog.querySelector('.catalog__option-list');
+  const optionsButton = optionList.querySelectorAll('h3');
+  const buttonOpenFilter = catalog.querySelector('.button--filter');
+  const buttonCloseFilter = catalog.querySelector('.button--close-filter');
+  const form = catalog.querySelector('form');
+
+  function closeFilter() {
+    form.style.display = 'none';
+    overlay.classList.add('hidden');
+    overlay.classList.remove('bg-overlay--white');
+  }
+
+  if (buttonOpenFilter) {
+    buttonOpenFilter.addEventListener('click', function (evt) {
+      form.style.display = 'block';
+      overlay.classList.add('bg-overlay--white');
+      overlay.classList.remove('hidden');
+
+      overlay.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        closeFilter();
+      });
+      window.addEventListener('keydown', function (evt) {
+        if (evt.key === 'Escape' || evt.key === 'Esc') {
+          evt.preventDefault();
+          closeFilter();
+        }
+      });
+    });
+  }
+  if (buttonCloseFilter) {
+    buttonCloseFilter.addEventListener('click', function (evt) {
+      form.style.display = 'none';
+      overlay.classList.add('hidden');
+      overlay.classList.remove('bg-overlay--white');
+      // body.classList.add('overflow');
+    });
+  }
+  optionsButton.forEach(function (item) {
+    item.addEventListener('click', function (evt) {
+      this.parentNode.classList.toggle('catalog__item--active');
+    });
+  });
+}
+
 
 const inputNumberPhone = document.querySelector('#user-tel');
 if (inputNumberPhone) {
@@ -78,59 +125,58 @@ function closeMenu() {
 
 
 const overlay = document.querySelector('.bg-overlay');
-const buttons = document.querySelectorAll('.button--login');
-const modal = document.querySelector('.modal--login');
-const buttonClose = modal.querySelector('.button--close');
-const inputEmail = modal.querySelector('input[type=email]');
 
-if (buttons) {
-  buttons.forEach(function (item) {
-    item.addEventListener('click', function (evt) {
-      evt.preventDefault();
-      overlay.classList.remove('hidden');
-      modal.classList.remove('hidden');
-      modal.classList.add("modal-show-x");
-      inputEmail.focus();
-      // body.dataset.scrollY = getBodyScrollTop() // сохраним значение скролла
-      // body.style.top = `-${body.dataset.scrollY}px`
-      body.classList.add('overflow');
-      eventclose();
+// 1- Элемент на который нажимаем, 2- модальное окно, 3-кнопка крестик для закрытия
+function bindModal(triggerSelector, modalSelector, closeSelector) //  Передаем в функцию селекторы!
+{
+  const trigger = document.querySelectorAll(triggerSelector); //Находим все элементы по селектору
+  const modal = document.querySelector(modalSelector); // Находим модальное окно по селектору
+  const close = document.querySelector(closeSelector); // находим по селектору "кнопку крестик"
 
-    });
-  });
-
-}
-
-function eventclose() {
-  window.addEventListener('keydown', onEscKeydown);
-  overlay.addEventListener('click', onOverlayClick);
-  buttonClose.addEventListener('click', removeModal);
-}
-function onEscKeydown(evt) {
-  if (evt.key === 'Escape' || evt.key === 'Esc') {
-    evt.preventDefault();
-    removeModal();
+  function closeModal() {
+    modal.classList.add('hidden');
+    modal.classList.remove("modal-show-x");
+    body.classList.remove('overflow');
+    overlay.classList.add('hidden');
   }
+
+  if (modal) {
+    trigger.forEach((item) => {
+      item.addEventListener('click', (evt) => { //На каждый элемент, вешаем событие
+        if (evt.target) {
+          evt.preventDefault();
+        }
+        overlay.classList.remove('hidden');
+        modal.classList.remove('hidden');
+        modal.classList.add("modal-show-x");
+        const input = modal.querySelector('input');
+        input.focus();
+        body.classList.add('overflow');
+      });
+    });
+
+    close.addEventListener('click', () => {
+      closeModal()
+    });
+    window.addEventListener('keydown', function (evt) {
+      if (evt.key === 'Escape' || evt.key === 'Esc') {
+        evt.preventDefault();
+        closeModal()
+      }
+    });
+    overlay.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      closeModal()
+    });
+
+  }
+
 }
 
-function removeModal() {
-  overlay.classList.add('hidden');
-  modal.classList.add('hidden');
-  modal.classList.remove("modal-show-x");
-  body.classList.remove('overflow');
-  window.removeEventListener('keydown', onEscKeydown);
-  overlay.removeEventListener('click', onOverlayClick);
-
-}
-
-function onOverlayClick() {
-  console.log('clickocerlay');
-  removeModal();
-}
-
-function getBodyScrollTop() {
-  return self.pageYOffset || (document.documentElement && document.documentElement.ScrollTop) || (document.body && document.body.scrollTop);
-}
+// 1- Элемент на который нажимаем, 2- модальное окно, 3-кнопка крестик для закрытия
+bindModal('.button--login', '.modal--login', '.modal--login .button--close');
+bindModal('.button--add-to-card', '.modal--cart', '.modal--cart .button--close');
+// bindModal('.button--filter', '.catalog__grid form', '.catalog__grid .button--close-filter');
 
 // Smooth scroll
 // const links = document.querySelectorAll('a[href^="#"]');
@@ -234,13 +280,36 @@ const swiper = new Swiper('.swiper-container', {
   },
 });
 
+
 window.addEventListener(`resize`, event => {
   if (screen.width < 1024) {
-    console.log("Size Window =" + screen.width);
     swiper.pagination.destroy();
-    // console.log("destroy");
     swiper.pagination.update();
     swiper.pagination.render();
-    // console.log("update");
   }
 }, false);
+
+
+const tab = document.querySelector('.article-card__tab');
+
+if (tab) {
+
+  const tabLinks = tab.querySelectorAll('.article-card__link');
+  const tabItems = tab.querySelectorAll('.article-card__description')
+
+  tabLinks.forEach((elem, index) => {
+    elem.addEventListener('click', (evt) => {
+      evt.preventDefault();
+      // Выделение кнопки
+      tabLinks.forEach((elem) => {
+        elem.classList.remove('article-card__link--active');
+      });
+      elem.classList.add('article-card__link--active');
+      // Показываем нужный слайд
+      tabItems.forEach((elem) => {
+        elem.classList.add('hidden');
+      });
+      tabItems[index].classList.remove('hidden');
+    });
+  });
+}

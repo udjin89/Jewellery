@@ -1,0 +1,82 @@
+.range-filter {
+  padding: 0 25px;
+  font-weight: 500;
+  font-size: 14px;
+
+  @include tablet {
+    padding-left: 50px;
+    padding-right: 88px;
+  }
+}
+
+.range-filter__control {
+  position: relative;
+  padding-top: 21px;
+  height: 50px;
+  border-radius: 2px;
+
+  @include tablet {
+    // padding-top: 25px;
+  }
+}
+
+.range-filter__control .scale {
+  height: 1px;
+  background-color: rgba($color: $brown, $alpha: 0.2);
+
+  @include tablet {
+    height: 1px;
+  }
+}
+
+.range-filter__control .bar {
+  height: 1px;
+  background-color: $brown;
+
+  @include tablet {
+    height: 1px;
+  }
+}
+
+.range-filter__control .toggle-control {
+  position: absolute;
+  top: 15px;
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  background-color: $brown;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+
+  @include tablet {
+    width: 13px;
+    height: 13px;
+  }
+
+  &:hover {
+    width: 19px;
+    height: 19px;
+    top: 13px;
+    transform: translateX(-25%);
+  }
+
+  &:active {
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.24);
+  }
+}
+
+
+.range-filter__price {
+  position: relative;
+}
+
+.range-filter__price input {
+  // display: inline-block;
+  width: 40px;
+  border: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 130%;
+  background-color: transparent;
+}

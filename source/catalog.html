@@ -34,7 +34,7 @@
             <use xlink:href="img/icon/sprite.svg#loupe"></use>
           </svg>
         </div>
-        <a class="logo">
+        <a class="logo" href="index.html">
           <svg width="66" height="66" viewBox="0 0 66 66" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
             fill="none">
             <use xlink:href="img/icon/sprite.svg#logo"></use>
@@ -98,7 +98,7 @@
   </header>
 
   <main class="main">
-    <section class="name">
+    <section class="name name--catalog">
       <div class="mask-background"></div>
       <div class="container">
         <h1>All Jewellery</h1>
@@ -110,13 +110,13 @@
         <h2 class="hidden">catalog</h2>
         <div class="catalog__grid">
           <button class="button button--filter">Filter</button>
-          <form class="search" action="https://echo.htmlacademy.ru" method="get">
-            <button class="button button--close-filter hidden"></button>
+          <form action="https://echo.htmlacademy.ru" method="get">
+            <button class="button button--close-filter" type="button"></button>
             <h3 class="hidden">Filter</h3>
             <ul class="catalog__option-list">
               <li class="catalog__item catalog__item--active">
                 <h3>Product</h3>
-                <ul class="input-options">
+                <ul class="input-options ">
                   <li class="input-options__item">
                     <input class="hidden" type="checkbox" name="Necklaces" id="Necklaces">
                     <label for="Necklaces" class="catalog__checkbox">Necklaces</label>
@@ -139,12 +139,12 @@
                 <h3>Material</h3>
                 <ul class="input-options">
                   <li class="input-options__item">
-                    <input class="hidden" type="checkbox" name="Necklaces" id="Necklaces">
-                    <label for="Necklaces">Necklaces</label>
+                    <input class="hidden" type="checkbox" name="Gold" id="Gold">
+                    <label for="Gold" class="catalog__checkbox">Gold</label>
                   </li>
                   <li class="input-options__item">
-                    <input class="hidden" type="checkbox" name="Chokers" id="Chokers">
-                    <label for="Chokers">Chokers</label>
+                    <input class="hidden" type="checkbox" name="Silver" id="Silver">
+                    <label for="Silver" class="catalog__checkbox">Silver</label>
                   </li>
                 </ul>
               </li>
@@ -152,43 +152,41 @@
                 <h3>Collection</h3>
                 <ul class="input-options">
                   <li class="input-options__item">
-                    <input class="hidden" type="checkbox" name="Necklaces" id="Necklaces">
-                    <label for="Necklaces">Necklaces</label>
+                    <input class="hidden" type="checkbox" name="Pink-flamingo" id="Pink-flamingo">
+                    <label for="Pink-flamingo" class="catalog__checkbox">Pink flamingo</label>
                   </li>
                   <li class="input-options__item">
-                    <input class="hidden" type="checkbox" name="Chokers" id="Chokers">
-                    <label for="Chokers">Chokers</label>
+                    <input class="hidden" type="checkbox" name="Dreams" id="Dreams">
+                    <label for="Dreams" class="catalog__checkbox">Dreams</label>
                   </li>
                 </ul>
               </li>
               <li class="catalog__item catalog__item--active">
                 <h3>Price</span></h3>
-                <div class="price-control">
-                  <label class="min-price">
-                    <input type="number" name="min-price" value="55">
-                  </label>
 
-                  <label class="max-price">
-                    <input type="number" name="max-price" value="155">
-                  </label>
-
-                </div>
                 <div class="range-filter">
                   <div class="range-filter__control">
                     <div class="scale">
-                      <div class="bar" style="width: 70%; margin-left: 30%;"></div>
+                      <div class="bar" style="width: 55%; margin-left: 30%;"></div>
                     </div>
-                    <button type="button" class="toggle toggle-min" aria-label="left-toggle" tabindex="0"
-                      style="left: 30%;"></button>
-                    <button type="button" class="toggle toggle-max" aria-label="right-toggle" tabindex="0"
-                      style="left: 100%;"></button>
-                  </div>
 
+                    <button type="button" class="toggle-control toggle-control--min" aria-label="left-toggle"
+                      tabindex="0" style="left: 30%;"></button>
+                    <label class="range-filter__price range-filter__price--min" style="left: 25%;">
+                      $<input type="number" name="min-price" value="55">
+                    </label>
+
+                    <button type="button" class="toggle-control toggle-control--max" aria-label="right-toggle"
+                      tabindex="0" style="left: 80%;"></button>
+                    <label class="range-filter__price range-filter__price--max" style="left: 45%;">
+                      $<input type="number" name="max-price" value="155">
+                    </label>
+                  </div>
                 </div>
               </li>
             </ul>
             <button class="button button--filter-apply" type="submit">Apply</button>
-            <button class="button button--filter-apply" type="reset">Clear All</button>
+            <button class="button button--filter-reset" type="reset">Clear All</button>
           </form>
           <ul class="cataglog__product-list">
             <li class="cataglog__product-item">
@@ -343,28 +341,29 @@
               </a>
             </li>
           </ul>
+          <div class="catalog__pagination">
+            <button class="button button--catalog button--catalog-prev">Previous</button>
+            <ul class="catalog__pagination-list">
+              <li>
+                <a class="catalog__pagination-link catalog__pagination-link--active">1</a>
+              </li>
+              <li>
+                <a class="catalog__pagination-link" href="#">2</a>
+              </li>
+              <li>
+                <a class="catalog__pagination-link" href="#">3</a>
+              </li>
+              <li>
+                <a class="catalog__pagination-link" href="#">4</a>
+              </li>
+              <li>
+                <a class="catalog__pagination-link" href="#">5</a>
+              </li>
+            </ul>
+            <button class="button button--catalog button--catalog-next">Next</button>
+          </div>
         </div>
-        <div class="catalog__pagination">
-          <div class="catalog__button-prev"></div>
-          <ul class="catalog__pagination-list">
-            <li>
-              <a class="catalog__pagination-link catalog__pagination-link--active">1</a>
-            </li>
-            <li>
-              <a class="pcatalog__pagination-link" href="#">2</a>
-            </li>
-            <li>
-              <a class="catalog__pagination-link" href="#">3</a>
-            </li>
-            <li>
-              <a class="pacatalog__pagination-link" href="#">4</a>
-            </li>
-            <li>
-              <a class="catalog__pagination-link" href="#">5</a>
-            </li>
-          </ul>
-          <div class="catalog__button-next"></div>
-        </div>
+
       </div>
     </section>
   </main>

@@ -1,55 +1,54 @@
 
 const overlay = document.querySelector('.bg-overlay');
-const buttons = document.querySelectorAll('.button--login');
-const modal = document.querySelector('.modal--login');
-const buttonClose = modal.querySelector('.button--close');
-const inputEmail = modal.querySelector('input[type=email]');
 
-if (buttons) {
-  buttons.forEach(function (item) {
-    item.addEventListener('click', function (evt) {
-      evt.preventDefault();
-      overlay.classList.remove('hidden');
-      modal.classList.remove('hidden');
-      modal.classList.add("modal-show-x");
-      inputEmail.focus();
-      // body.dataset.scrollY = getBodyScrollTop() // сохраним значение скролла
-      // body.style.top = `-${body.dataset.scrollY}px`
-      body.classList.add('overflow');
-      eventclose();
+// 1- Элемент на который нажимаем, 2- модальное окно, 3-кнопка крестик для закрытия
+function bindModal(triggerSelector, modalSelector, closeSelector) //  Передаем в функцию селекторы!
+{
+  const trigger = document.querySelectorAll(triggerSelector); //Находим все элементы по селектору
+  const modal = document.querySelector(modalSelector); // Находим модальное окно по селектору
+  const close = document.querySelector(closeSelector); // находим по селектору "кнопку крестик"
 
-    });
-  });
-
-}
-
-function eventclose() {
-  window.addEventListener('keydown', onEscKeydown);
-  overlay.addEventListener('click', onOverlayClick);
-  buttonClose.addEventListener('click', removeModal);
-}
-function onEscKeydown(evt) {
-  if (evt.key === 'Escape' || evt.key === 'Esc') {
-    evt.preventDefault();
-    removeModal();
+  function closeModal() {
+    modal.classList.add('hidden');
+    modal.classList.remove("modal-show-x");
+    body.classList.remove('overflow');
+    overlay.classList.add('hidden');
   }
+
+  if (modal) {
+    trigger.forEach((item) => {
+      item.addEventListener('click', (evt) => { //На каждый элемент, вешаем событие
+        if (evt.target) {
+          evt.preventDefault();
+        }
+        overlay.classList.remove('hidden');
+        modal.classList.remove('hidden');
+        modal.classList.add("modal-show-x");
+        const input = modal.querySelector('input');
+        input.focus();
+        body.classList.add('overflow');
+      });
+    });
+
+    close.addEventListener('click', () => {
+      closeModal()
+    });
+    window.addEventListener('keydown', function (evt) {
+      if (evt.key === 'Escape' || evt.key === 'Esc') {
+        evt.preventDefault();
+        closeModal()
+      }
+    });
+    overlay.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      closeModal()
+    });
+
+  }
+
 }
 
-function removeModal() {
-  overlay.classList.add('hidden');
-  modal.classList.add('hidden');
-  modal.classList.remove("modal-show-x");
-  body.classList.remove('overflow');
-  window.removeEventListener('keydown', onEscKeydown);
-  overlay.removeEventListener('click', onOverlayClick);
-
-}
-
-function onOverlayClick() {
-  console.log('clickocerlay');
-  removeModal();
-}
-
-function getBodyScrollTop() {
-  return self.pageYOffset || (document.documentElement && document.documentElement.ScrollTop) || (document.body && document.body.scrollTop);
-}
+// 1- Элемент на который нажимаем, 2- модальное окно, 3-кнопка крестик для закрытия
+bindModal('.button--login', '.modal--login', '.modal--login .button--close');
+bindModal('.button--add-to-card', '.modal--cart', '.modal--cart .button--close');
+// bindModal('.button--filter', '.catalog__grid form', '.catalog__grid .button--close-filter');

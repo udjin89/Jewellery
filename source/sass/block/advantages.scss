@@ -1,0 +1,20 @@
+.advantages {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.advantages__item {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 130%;
+  color: $grey;
+
+  &:not(:last-of-type) {
+    border-right: 1px solid tomato;
+    margin-right: 14px;
+    padding-right: 13px;
+  }
+}
