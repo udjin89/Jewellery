@@ -13,7 +13,8 @@
   }
 }
 
-.products .swiper-pagination {
+.products .swiper-pagination,
+.products--card .swiper-pagination1 {
   position: absolute;
   bottom: -62px;
   // transform: translateY(-100%);
@@ -97,4 +98,10 @@
 .products .swiper-button-next {
   transform: rotate(180deg) translate(100%, 100%);
   right: -100%;
+}
+
+.products--card .swiper-pagination {
+  width: 50px;
+  height: 50px;
+  background-color: pink;
 }

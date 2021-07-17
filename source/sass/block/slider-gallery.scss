@@ -94,7 +94,7 @@
   }
 }
 
-.slider__images .swiper-pagination {
+.slider__images .swiper-pagination-gallery {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -106,7 +106,7 @@
 }
 
 .slider__images .slider__image img {
-  transition: 3s;
+  // transition: 3s;
 }
 
 .slider__images .slider__image:hover img {

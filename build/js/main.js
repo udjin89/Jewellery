@@ -28,6 +28,21 @@ if (accordion) {
   });
 }
 
+const options = document.querySelector('.catalog__option-list');
+if (options) {
+  const optionsList = options.querySelectorAll('h3');
+
+  optionsList.forEach((elem, index) => {
+
+    elem.addEventListener('keydown', function (evt) {
+      if (evt.key === 'Enter' || evt.key === ' ') {
+        this.parentNode.classList.toggle('catalog__item--active');
+      }
+    });
+  });
+
+}
+
 const catalog = document.querySelector('.catalog');
 if (catalog) {
   const optionList = catalog.querySelector('.catalog__option-list');
@@ -225,7 +240,8 @@ const sliderImages = new Swiper('.slider__images .swiper-container', { // ище
   },
   grabCursor: true, // менять иконку курсора
   thumbs: { // указываем на превью слайдер
-    swiper: sliderThumbs // указываем имя превью слайдера
+    swiper: sliderThumbs, // указываем имя превью слайдера
+    autoScrollOffset: 2,
   },
   breakpoints: { // условия для разных размеров окна браузера
     0:
@@ -233,7 +249,7 @@ const sliderImages = new Swiper('.slider__images .swiper-container', { // ище
       direction: 'horizontal', // горизонтальная прокрутка
       spaceBetween: 0,
       pagination: {
-        el: '.swiper-pagination',
+        el: '.swiper-pagination-gallery',
         type: 'custom',
         renderCustom: function (swiper, current, total) {
           return current + '  of  ' + (total);
@@ -244,6 +260,13 @@ const sliderImages = new Swiper('.slider__images .swiper-container', { // ище
     { // при 0px и выше
       direction: 'horizontal', // горизонтальная прокрутка
       spaceBetween: 14,
+      pagination: {
+        el: '.swiper-pagination-gallery',
+        type: 'custom',
+        renderCustom: function (swiper, current, total) {
+          return '';
+        }
+      },
     },
     1024: { // при 768px и выше
       direction: 'vertical', // вертикальная прокрутка
@@ -257,8 +280,10 @@ window.addEventListener('resize', event => {
     // swiper.pagination.destroy();
     swiper.pagination.update();
     swiper.pagination.render();
+    swiper2.pagination.update();
+    swiper2.pagination.render();
 
-    // sliderImages.pagination.destroy();
+    // // sliderImages.pagination.destroy();
     sliderImages.pagination.update();
     sliderImages.pagination.render();
   }
@@ -358,7 +383,7 @@ const swiper2 = new Swiper('.products--card .swiper-container', {
       spaceBetween: 30,
       allowTouchMove: true,
       pagination: {
-        el: '.swiper-pagination',
+        el: '.swiper-pagination1',
         clickable: true,
         type: 'custom',
         renderCustom: function (swiper, current, total) {
@@ -372,7 +397,7 @@ const swiper2 = new Swiper('.products--card .swiper-container', {
       spaceBetween: 30,
       allowTouchMove: true,
       pagination: {
-        el: '.swiper-pagination',
+        el: '.swiper-pagination1',
         clickable: true,
         type: 'bullets',
         renderBullet: function (index, className) {
@@ -387,7 +412,7 @@ const swiper2 = new Swiper('.products--card .swiper-container', {
       spaceBetween: 10,
       allowTouchMove: false,
       pagination: {
-        el: '.swiper-pagination',
+        el: '.swiper-pagination1',
         clickable: true,
         type: 'bullets',
         renderBullet: function (index, className) {
@@ -401,7 +426,7 @@ const swiper2 = new Swiper('.products--card .swiper-container', {
       spaceBetween: 30,
       allowTouchMove: false,
       pagination: {
-        el: '.swiper-pagination',
+        el: '.swiper-pagination1',
         clickable: true,
         type: 'bullets',
         renderBullet: function (index, className) {
@@ -411,18 +436,6 @@ const swiper2 = new Swiper('.products--card .swiper-container', {
     },
   },
 });
-
-window.addEventListener(`resize`, event => {
-  if (screen.width < 1024) {
-    // swiper.pagination.destroy();
-    swiper.pagination.update();
-    swiper.pagination.render();
-
-    sliderImages.pagination.destroy();
-    sliderImages.pagination.update();
-    sliderImages.pagination.render();
-  }
-}, false);
 
 
 const tab = document.querySelector('.article-card__tab');

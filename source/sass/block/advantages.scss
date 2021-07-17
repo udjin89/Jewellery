@@ -5,6 +5,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @include mobile {
+    padding: 0 8px;
+  }
 }
 
 .advantages__item {

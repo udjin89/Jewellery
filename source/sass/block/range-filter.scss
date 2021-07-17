@@ -22,6 +22,7 @@
 }
 
 .range-filter__control .scale {
+  position: relative;
   margin-bottom: 9px;
   height: 1px;
   background-color: rgba($color: $brown, $alpha: 0.2);
@@ -42,6 +43,7 @@
 
 .range-filter__control .toggle-control {
   position: absolute;
+  z-index: 10;
   top: -3px;
   width: 15px;
   height: 15px;
@@ -60,7 +62,7 @@
     width: 19px;
     height: 19px;
     top: 13px;
-    transform: translateX(-25%);
+    // transform: translateX(-25%);
   }
 
   &:active {

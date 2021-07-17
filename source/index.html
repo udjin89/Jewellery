@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="keywords" content="Perfection,">
-  <meta name="description" content="">
+  <meta name="keywords" content="Jewellery, Perfection, diamond, gold, silver">
+  <meta name="description" content="We made jewellery, necklaces, chokers , rings, earrings">
   <title>Jewellery</title>
   <!-- <link rel="preload" href="fonts/poppins-regular.woff2" as="font"> -->
   <!-- <link rel="preload" href="fonts/poppins-medium.woff2" as="font"> -->
@@ -27,7 +27,7 @@
         </button>
         <div class="header__search">
           <label for="search" class="hidden">Search</label>
-          <input class="search" id="search" type="search" placeholder="Type here to search">
+          <input tabindex="0" id="search" type="search" placeholder="Type here to search">
           <svg width="14" height="14" viewBox="0 0 17 17" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
             <use xlink:href="img/icon/sprite.svg#loupe"></use>
           </svg>
@@ -53,8 +53,8 @@
     <div class="menu menu--open">
       <div class="container">
         <p class="menu__search">
-          <label for="search" class="hidden">Search</label>
-          <input class="search" id="search" type="search" placeholder="Type here to search">
+          <label for="search-menu" class="hidden">Search</label>
+          <input class="search" id="search-menu" type="search" placeholder="Type here to search">
           <svg width="16" height="16" viewBox="0 0 17 17" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
             <use xlink:href="img/icon/sprite.svg#loupe"></use>
           </svg>
@@ -395,7 +395,7 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__grid">
-        <form action="">
+        <form action="https://echo.htmlacademy.ru" method="POST">
           <h2>The good stuff in&nbsp;your inbox </h2>
           <p>News and updates from CH. No spam, we promise.</p>
           <div class="email-field">
@@ -479,7 +479,7 @@
       <label class="hidden" for="userEmail">input e-mail</label>
       <input id="userEmail" name="userEmail" type="email" placeholder="Your E-mail" required autofocus>
 
-      <label class="hidden" for="Password">input password</label>
+      <label class="hidden" for="userPassword">input password</label>
       <input id="userPassword" name="userEmail" type="password" placeholder="Password" required>
 
       <a href="#" class="modal__forgot">Forgot your password?</a>

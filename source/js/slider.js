@@ -92,7 +92,7 @@ const swiper2 = new Swiper('.products--card .swiper-container', {
       spaceBetween: 30,
       allowTouchMove: true,
       pagination: {
-        el: '.swiper-pagination',
+        el: '.swiper-pagination1',
         clickable: true,
         type: 'custom',
         renderCustom: function (swiper, current, total) {
@@ -106,7 +106,7 @@ const swiper2 = new Swiper('.products--card .swiper-container', {
       spaceBetween: 30,
       allowTouchMove: true,
       pagination: {
-        el: '.swiper-pagination',
+        el: '.swiper-pagination1',
         clickable: true,
         type: 'bullets',
         renderBullet: function (index, className) {
@@ -121,7 +121,7 @@ const swiper2 = new Swiper('.products--card .swiper-container', {
       spaceBetween: 10,
       allowTouchMove: false,
       pagination: {
-        el: '.swiper-pagination',
+        el: '.swiper-pagination1',
         clickable: true,
         type: 'bullets',
         renderBullet: function (index, className) {
@@ -135,7 +135,7 @@ const swiper2 = new Swiper('.products--card .swiper-container', {
       spaceBetween: 30,
       allowTouchMove: false,
       pagination: {
-        el: '.swiper-pagination',
+        el: '.swiper-pagination1',
         clickable: true,
         type: 'bullets',
         renderBullet: function (index, className) {
@@ -145,15 +145,3 @@ const swiper2 = new Swiper('.products--card .swiper-container', {
     },
   },
 });
-
-window.addEventListener(`resize`, event => {
-  if (screen.width < 1024) {
-    // swiper.pagination.destroy();
-    swiper.pagination.update();
-    swiper.pagination.render();
-
-    sliderImages.pagination.destroy();
-    sliderImages.pagination.update();
-    sliderImages.pagination.render();
-  }
-}, false);

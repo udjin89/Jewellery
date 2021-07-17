@@ -23,8 +23,15 @@
   line-height: 24px;
   text-decoration: none;
   color: $black;
-}
 
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}
 
 .navigation--open .navigation__list {
   @include tablet {
@@ -54,4 +61,7 @@
     color: $white;
   }
 
+  &:active {
+    color: $black;
+  }
 }

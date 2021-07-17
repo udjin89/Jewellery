@@ -24,7 +24,7 @@
   &--products {
     margin-top: 20px;
     position: relative;
-    z-index: 10;
+    z-index: 2;
     width: 87px;
 
     @include tablet {
@@ -39,5 +39,15 @@
     @include tablet {
       margin-top: 22px;
     }
+  }
+
+  &:hover {
+    background-color: $brown;
+    color: $white;
+    border-radius: 5px;
+  }
+
+  &:active {
+    opacity: 0.7;
   }
 }

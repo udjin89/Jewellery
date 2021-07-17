@@ -63,6 +63,15 @@
   width: 100%;
   color: $white;
   background-color: $brown;
+  margin-top: 50px;
+  padding: 24px 0;
+
+  &:hover {
+    color: $black;
+    background-color: $white;
+    outline: 5px solid $brown;
+    outline-offset: -4px;
+  }
 }
 
 .button--filter {
@@ -82,6 +91,13 @@
   @include mobile {
     margin-bottom: 40px;
   }
+
+  &:hover {
+    color: $black;
+    background-color: $white;
+    outline: 5px solid $brown;
+    outline-offset: -4px;
+  }
 }
 
 .button--filter-apply,
@@ -93,7 +109,7 @@
 
   @include tablet {
     // max-width: 362px;
-    margin-left: 40px;
+    // margin-left: 40px;
     // margin-right: 40px;
   }
 }
@@ -135,17 +151,30 @@
 
   @include mobile {
     margin-top: 37px;
+    margin-bottom: 13px;
+  }
+}
+
+.button--checkout,
+.button--continue {
+  width: 200px;
+
+  @include mobile {
+    width: 100%;
   }
 }
 
 .button--checkout {
   margin: 0;
-  width: 200px;
+
 }
 
 .button--continue {
   color: $black;
-  width: 200px;
+
+  @include mobile {
+    margin-bottom: 20px;
+  }
 }
 
 .button--filter-reset,

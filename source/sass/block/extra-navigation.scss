@@ -15,4 +15,12 @@
   line-height: 130%;
   color: rgba($white, 0.75);
   text-decoration: none;
+
+  &:hover {
+    color: $white;
+  }
+
+  &:active {
+    color: $black;
+  }
 }

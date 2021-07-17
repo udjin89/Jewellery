@@ -162,6 +162,25 @@
   @include tablet {
     padding: 40px;
   }
+
+  @include mobile {
+    padding: 24px 20px 21px 20px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $brown;
+    color: $white;
+
+    &::before,
+    &::after {
+      background-color: $white;
+    }
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
 }
 
 .catalog__item--active h3 {
@@ -247,5 +266,15 @@
 
   @include mobile {
     padding: 0 12px 0 12px;
+  }
+}
+
+.catalog__button-wrap {
+  @include tablet {
+    padding: 0 40px;
+  }
+
+  @include mobile {
+    padding: 0 20px;
   }
 }

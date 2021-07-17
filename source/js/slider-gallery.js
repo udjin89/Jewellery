@@ -29,7 +29,8 @@ const sliderImages = new Swiper('.slider__images .swiper-container', { // ище
   },
   grabCursor: true, // менять иконку курсора
   thumbs: { // указываем на превью слайдер
-    swiper: sliderThumbs // указываем имя превью слайдера
+    swiper: sliderThumbs, // указываем имя превью слайдера
+    autoScrollOffset: 2,
   },
   breakpoints: { // условия для разных размеров окна браузера
     0:
@@ -37,7 +38,7 @@ const sliderImages = new Swiper('.slider__images .swiper-container', { // ище
       direction: 'horizontal', // горизонтальная прокрутка
       spaceBetween: 0,
       pagination: {
-        el: '.swiper-pagination',
+        el: '.swiper-pagination-gallery',
         type: 'custom',
         renderCustom: function (swiper, current, total) {
           return current + '  of  ' + (total);
@@ -48,6 +49,13 @@ const sliderImages = new Swiper('.slider__images .swiper-container', { // ище
     { // при 0px и выше
       direction: 'horizontal', // горизонтальная прокрутка
       spaceBetween: 14,
+      pagination: {
+        el: '.swiper-pagination-gallery',
+        type: 'custom',
+        renderCustom: function (swiper, current, total) {
+          return '';
+        }
+      },
     },
     1024: { // при 768px и выше
       direction: 'vertical', // вертикальная прокрутка
@@ -61,8 +69,10 @@ window.addEventListener('resize', event => {
     // swiper.pagination.destroy();
     swiper.pagination.update();
     swiper.pagination.render();
+    swiper2.pagination.update();
+    swiper2.pagination.render();
 
-    // sliderImages.pagination.destroy();
+    // // sliderImages.pagination.destroy();
     sliderImages.pagination.update();
     sliderImages.pagination.render();
   }

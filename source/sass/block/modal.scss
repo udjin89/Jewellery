@@ -56,11 +56,18 @@
   }
 }
 
+.modal input[type="email"] {
+  margin-bottom: 20px;
+}
+
 .modal__forgot {
+  margin-top: 3px;
   font-size: 12px;
   line-height: 18px;
   text-decoration: none;
   color: $grey;
+  display: block;
+  text-align: right;
 }
 
 .modal__sign,
@@ -69,6 +76,8 @@
   line-height: 21px;
   font-weight: 500;
   color: $grey;
+  margin-top: 15px;
+  text-align: center;
 }
 
 .modal__sign-up {
@@ -77,7 +86,7 @@
 }
 
 .modal--login {
-  padding-top: 198px;
+  padding-top: 185px;
   background-image: url("../img/background/login-bg.jpg");
   background-repeat: no-repeat;
 
@@ -91,16 +100,25 @@
   }
 }
 
+.modal--login h2 {
+  margin-bottom: 25px;
+}
+
 .modal__button-group {
   margin-top: 40px;
   width: 100%;
   height: 68px;
   display: flex;
   justify-content: space-between;
+
+  @include mobile {
+    display: block;
+    margin-top: 20px;
+  }
 }
 
 .modal--cart {
-  padding: 55px 35px;
+  padding: 50px 35px;
   max-width: 500px;
   background-color: $white;
   box-shadow: 0px 4px 32px rgba(121, 121, 121, 0.24);
@@ -108,6 +126,18 @@
   @include mobile {
     min-width: 290px;
     width: 90%;
+    min-height: 519px;
+    padding: 37px 15px;
+  }
+}
+
+.modal--cart h2 {
+  @include title;
+  font-size: 26px;
+
+  @include mobile {
+    font-size: 24px;
+    padding: 0 30px;
   }
 }
 
