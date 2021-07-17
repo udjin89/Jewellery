@@ -194,24 +194,58 @@ bindModal('.button--add-to-card', '.modal--cart', '.modal--cart .button--close')
 //   };
 // }
 
-const swiper = new Swiper('.swiper-container', {
+const sliderThumbs = new Swiper('.slider__thumbs .swiper-container', { // ищем слайдер превью по селектору
+  // задаем параметры
+  direction: 'vertical', // вертикальная прокрутка
+  slidesPerView: 3, // показывать по 3 превью
+  spaceBetween: 24, // расстояние между слайдами
+  freeMode: true,// при перетаскивании превью ведет себя как при скролле
+  breakpoints: { // условия для разных размеров окна браузера
+    0: { // при 0px и выше
+      direction: 'horizontal', // горизонтальная прокрутка
+      spaceBetween: 14,
+    }, 1024: { // при 1024px и выше
+      direction: 'vertical', // вертикальная прокрутка
+    }
+  },
+});// Инициализация слайдера изображенийconst
+
+sliderImages = new Swiper('.slider__images .swiper-container', { // ищем слайдер превью по селектору
+  // задаем параметры
+  direction: 'vertical', // вертикальная прокрутка
+  slidesPerView: 1, // показывать по 1 изображению
+  spaceBetween: 32, // расстояние между слайдами
+  mousewheel: true, // можно прокручивать изображения колёсиком мыши
+  navigation: { // задаем кнопки навигации
+    nextEl: '.slider__next', // кнопка Next
+    prevEl: '.slider__prev' // кнопка Prev
+  },
+  grabCursor: true, // менять иконку курсора
+  thumbs: { // указываем на превью слайдер
+    swiper: sliderThumbs // указываем имя превью слайдера
+  },
+  breakpoints: { // условия для разных размеров окна браузера
+    0:
+    { // при 0px и выше
+      direction: 'horizontal', // горизонтальная прокрутка
+      spaceBetween: 14,
+      pagination: {
+        el: '.slider__images .swiper-pagination',
+        type: 'fraction',
+      },
+    },
+    1024: { // при 768px и выше
+      direction: 'vertical', // вертикальная прокрутка
+    }
+  },
+});
+
+const swiper = new Swiper('.products .swiper-container', {
   speed: 400,
   observer: true,
   observeParents: true,
   // spaceBetween: 30,
   loop: true,
-  // slidesPerView: 4,
-  // slidesPerGroup: 4,
-
-  // If we need pagination
-  // pagination: {
-  //   el: '.swiper-pagination',
-  //   clickable: true,
-  //   type: 'bullets',
-  //   renderBullet: function (index, className) {
-  //     return '<span class="' + className + '"> ' + (index + 1) + '</span>';
-  //   },
-  // },
 
   // Navigation arrows
   navigation: {
@@ -230,7 +264,7 @@ const swiper = new Swiper('.swiper-container', {
         clickable: true,
         type: 'custom',
         renderCustom: function (swiper, current, total) {
-          return current + ' of ' + (total);
+          return current + '  of  ' + (total);
         }
       },
     },
@@ -283,7 +317,7 @@ const swiper = new Swiper('.swiper-container', {
 
 window.addEventListener(`resize`, event => {
   if (screen.width < 1024) {
-    swiper.pagination.destroy();
+    // swiper.pagination.destroy();
     swiper.pagination.update();
     swiper.pagination.render();
   }

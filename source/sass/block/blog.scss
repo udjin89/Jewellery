@@ -1,4 +1,14 @@
+.blog {
+  padding-top: 71px;
+
+  @include tablet {
+    padding-top: 13px;
+  }
+}
+
 .blog h2 {
+  margin: 0;
+  padding: 0;
   @include title;
   font-size: 34px;
   line-height: 130%;
@@ -23,6 +33,7 @@
   }
 
   @include mobile {
+    margin-top: 50px;
     grid-row-gap: 40px;
     grid-template-rows: auto;
   }
@@ -56,6 +67,7 @@
 
   &--blog-power {
     background-image: url("../img/content/alex-holyoake-unsplash-blog-power-desktop.jpg");
+    background-position-x: right;
 
     @include retina {
       background-image: url("../img/content/alex-holyoake-unsplash-blog-power-desktop@2x.jpg");
@@ -101,14 +113,22 @@
 
 .blog__article h3 {
   margin: 0;
-  margin-top: 25px;
-  margin-bottom: 50px;
-  padding: 0;
+  margin-top: 13px;
+  margin-bottom: 30px;
+  padding: 0 40px;
   @include title;
   font-weight: 600;
   font-size: 26px;
   line-height: 130%;
   text-align: center;
+
+  @include tablet {
+    padding: 0 80px;
+  }
+
+  @include mobile {
+    padding: 0 60px;
+  }
 }
 
 .blog__article:nth-child(3n) {
@@ -124,7 +144,7 @@
 }
 
 .blog__article-description {
-  padding-top: 71px;
+  padding-top: 68px;
   width: 50%;
   height: 300px;
   margin-left: auto;
@@ -153,6 +173,9 @@
 }
 
 .blog__article:nth-child(2n) .blog__article-description {
+  margin-left: 0;
+  margin-right: auto;
+
   @include tablet {
     margin-left: 0;
     margin-right: auto;
@@ -162,5 +185,19 @@
     margin-right: 0;
     // margin-left: 0;
     // margin-top: auto;
+  }
+}
+
+.blog__article--blog-power h3 {
+  padding: 0 60px;
+
+  @include tablet {
+    padding: 0 90px;
+  }
+}
+
+.blog__article--blog-trends .blog__article-description {
+  @include mobile {
+    padding-top: 63px;
   }
 }

@@ -1,6 +1,6 @@
 .name {
   position: relative;
-  margin-top: 20px;
+  margin-top: 19px;
   padding-top: 195px;
   height: 463px;
 
@@ -14,6 +14,7 @@
   }
 
   @include tablet {
+    margin-top: 25px;
     // min-height: 0;
     // padding-bottom: 160px;
     background-image: url("../img/background/main-tablet.jpg");
@@ -25,6 +26,7 @@
   }
 
   @include mobile {
+    margin-top: 15px;
     // padding-bottom: 73px;
     background-image: url("../img/background/main-mobile.jpg");
 
@@ -75,9 +77,12 @@
 .name h1 {
   @include title;
   font-size: 45px;
-  // line-height: 130%;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+
+  @include mobile {
+    font-size: 38px;
+  }
 }
 
 .name p {
@@ -86,7 +91,11 @@
   font-weight: 400;
   font-size: 38px;
   margin-top: 18px;
+
   // line-height: 130%;
+  @include mobile {
+    font-size: 34px;
+  }
 }
 
 .name--catalog h1 {

@@ -56,6 +56,17 @@ img {
   margin-right: 0;
 }
 
+html {
+  overflow-y: scroll;
+}
+
+@media screen and (min-width: 960px) {
+  html {
+    margin-left: calc(100vw - 100%);
+    margin-right: 0;
+  }
+}
+
 .page,
 .page__body {
   min-height: 100%;
@@ -80,12 +91,7 @@ img {
   // align-content: start;/
 }
 
-@media screen and (min-width: 960px) {
-  .page__body {
-    margin-left: calc(100vw - 100%);
-    margin-right: 0;
-  }
-}
+
 
 .main {
   /* 1 flex-grow, 0 flex-shrink, auto flex-basis */

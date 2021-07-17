@@ -1,21 +1,31 @@
 .footer {
-  padding-top: 100px;
+  padding-top: 90px;
   padding-bottom: 100px;
   background-color: #000;
   /* 0 flex-grow, 0 flex-shrink, auto flex-basis */
   flex: 0 0 auto;
+
+  @include tablet {
+    padding-top: 50px;
+  }
 }
 
 .footer__grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+
+  @media screen and (max-width: 1200px) {
+    justify-content: space-between;
+  }
+
 
   @include tablet {
-    justify-content: start;
+    padding-right: 118px;
+    justify-content: space-between;
   }
 
   @include mobile {
+    padding-right: 0;
     display: block;
   }
 }
@@ -25,7 +35,7 @@
   padding: 0;
   @include title;
   font-size: 34px;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
   line-height: 130%;
   color: $white;
 
@@ -36,21 +46,60 @@
 
 .footer p {
   margin: 0;
+  margin-top: 5px;
   padding: 0;
   font-size: 16px;
   font-weight: 400;
-  letter-spacing: 0.03em;
   color: #9b9997;
 
   @include mobile {
+    margin-top: 11px;
     padding-right: 50px;
+    line-height: 23px;
   }
 }
 
 .footer__list {
   margin: 0;
+  margin-left: 90px;
   padding: 0;
   list-style: none;
+
+  &--extra-nav {
+    margin-left: 72px;
+  }
+
+  &--social {
+    margin-left: 105px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    margin-left: 0;
+  }
+
+  @include tablet {
+    margin-top: 40px;
+
+    &--social {
+      margin-right: -10px;
+    }
+
+    &--extra-nav {
+      margin-top: 30px;
+    }
+  }
+
+  @include mobile {
+    &--social {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+.footer__list-item {
+  font-size: 16px;
+  margin-bottom: 13px;
 }
 
 .footer__link {
@@ -58,7 +107,7 @@
   font-size: 16px;
   color: $white;
   text-decoration: none;
-  margin-right: 30px;
+  // margin-right: 30px;
 
   &--facebook {}
 
@@ -69,35 +118,61 @@
   &--twitter {}
 }
 
+.footer__link span {
+  // color: red;
+  display: inline-block;
+  margin-left: 12px;
+}
+
 .footer__link--facebook svg {
-  width: 12px;
-  height: 21px;
+  @include mobile {
+    width: 12px;
+    height: 21px;
+  }
 }
 
 .footer__link--instagram svg {
-  width: 20px;
-  height: 21px;
+  @include mobile {
+    width: 20px;
+    height: 21px;
+  }
 }
 
 .footer__link--pinterest svg {
-  width: 20px;
-  height: 21px;
+  @include mobile {
+    width: 20px;
+    height: 21px;
+  }
 }
 
 .footer__link--twitter svg {
-  width: 20px;
-  height: 18px;
+  @include mobile {
+    width: 20px;
+    height: 18px;
+  }
 }
 
 .footer__grid form {
   @include tablet {
     width: 100%;
-    padding-right: 118px;
+    // padding-right: 118px;
     // max-width: 560px;
   }
 
   @include mobile {
     padding-right: 0;
     max-width: 100%;
+  }
+}
+
+.footer__link span {
+  @include mobile {
+    display: none;
+  }
+}
+
+.footer__list--social .footer__list-item {
+  @include mobile {
+    margin-right: 30px;
   }
 }

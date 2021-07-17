@@ -1,10 +1,17 @@
 .email-field {
+  margin-top: 38px;
+  width: 500px;
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid $white;
+
+  @include tablet {
+    width: 100%;
+  }
 }
 
 .email-field input {
+  height: 30px;
   flex-grow: 1;
   border: none;
   background-color: transparent;
@@ -12,7 +19,7 @@
 }
 
 .email-field input::placeholder {
-
+  // padding-bottom: 10px;
   letter-spacing: 0.7px;
   font-weight: 500;
   font-size: 14px;

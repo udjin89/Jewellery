@@ -6,20 +6,38 @@
   text-decoration: none;
   font-weight: 500;
   font-size: 16px;
+  // line-height: 18px;
+  margin-top: 0;
   text-align: center;
   border-bottom: 1px solid $brown;
 
   &--article {
     width: 97px;
+    margin-top: 0px;
   }
 
   &--blog {
-    width: 76px;
+    width: 66px;
+    margin-top: 15px;
   }
 
   &--products {
+    margin-top: 20px;
     position: relative;
     z-index: 10;
     width: 87px;
+
+    @include tablet {
+      margin-top: 15px;
+    }
+  }
+
+  &--follow {
+    margin-top: 32px;
+    width: 75px;
+
+    @include tablet {
+      margin-top: 22px;
+    }
   }
 }

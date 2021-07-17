@@ -1,4 +1,6 @@
 .article-card h1 {
+  margin: 0;
+  padding: 0;
   @include title;
   font-size: 34px;
   line-height: 130%;
@@ -11,14 +13,36 @@
 
 .article-card__grid {
   display: flex;
-  justify-content: start;
+  justify-content: space-between;
+
+  @include mobile {
+    display: block;
+  }
+
 }
 
 .article-card__slider {
-  width: 600px;
+  max-width: 600px;
+  margin-right: 5px;
+
+  @include tablet {
+    width: 319px;
+    min-width: 290px;
+    margin-right: 40px;
+  }
+
+  @include mobile {
+    margin: 0 auto;
+  }
 }
 
-.article-card__item {}
+.article-card__item {
+  margin-right: 100px;
+
+  @include tablet {
+    margin-right: 0;
+  }
+}
 
 .article-card__tab {}
 

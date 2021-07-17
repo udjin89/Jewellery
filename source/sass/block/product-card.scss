@@ -5,18 +5,30 @@
 }
 
 .product-card h3 {
+  margin: 0;
+  margin-top: 16px;
+  padding: 0;
   font-weight: 500;
   font-size: 16px;
   line-height: 130%;
   text-align: center;
 
+  @include mobile {
+    margin-top: 10px;
+  }
+
 }
 
 .product-card p {
+  margin-top: 8px;
   font-weight: 700;
   font-size: 14px;
   line-height: 130%;
   text-align: center;
+
+  @include tablet {
+    margin-top: 5px;
+  }
 }
 
 .product-card img {

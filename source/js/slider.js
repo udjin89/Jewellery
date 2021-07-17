@@ -1,21 +1,9 @@
-const swiper = new Swiper('.swiper-container', {
+const swiper = new Swiper('.products .swiper-container', {
   speed: 400,
   observer: true,
   observeParents: true,
   // spaceBetween: 30,
   loop: true,
-  // slidesPerView: 4,
-  // slidesPerGroup: 4,
-
-  // If we need pagination
-  // pagination: {
-  //   el: '.swiper-pagination',
-  //   clickable: true,
-  //   type: 'bullets',
-  //   renderBullet: function (index, className) {
-  //     return '<span class="' + className + '"> ' + (index + 1) + '</span>';
-  //   },
-  // },
 
   // Navigation arrows
   navigation: {
@@ -34,7 +22,7 @@ const swiper = new Swiper('.swiper-container', {
         clickable: true,
         type: 'custom',
         renderCustom: function (swiper, current, total) {
-          return current + ' of ' + (total);
+          return current + '  of  ' + (total);
         }
       },
     },
@@ -87,7 +75,7 @@ const swiper = new Swiper('.swiper-container', {
 
 window.addEventListener(`resize`, event => {
   if (screen.width < 1024) {
-    swiper.pagination.destroy();
+    // swiper.pagination.destroy();
     swiper.pagination.update();
     swiper.pagination.render();
   }
