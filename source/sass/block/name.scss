@@ -36,6 +36,9 @@
   }
 
   &--catalog {
+    height: 261px;
+    padding-top: 98px;
+    letter-spacing: 0.5px;
     background-image: url("../img/background/catalog.jpg");
     background-repeat: no-repeat;
 
@@ -56,7 +59,7 @@
     }
 
     @include mobile {
-
+      padding-top: 87px;
       background-image: url("../img/background/catalog.jpg");
 
       @include retina {
@@ -92,7 +95,6 @@
   font-size: 38px;
   margin-top: 18px;
 
-  // line-height: 130%;
   @include mobile {
     font-size: 34px;
   }
@@ -104,6 +106,12 @@
 }
 
 .name--catalog p {
-
   font-size: 22px;
+  margin-top: 10px;
+  letter-spacing: 0.05px;
+
+  @include mobile {
+    line-height: 25px;
+    // letter-spacing: 0.001px;
+  }
 }

@@ -85,7 +85,7 @@
     }
 
     &--extra-nav {
-      margin-top: 30px;
+      // margin-top: 30px;
     }
   }
 
@@ -93,6 +93,10 @@
     &--social {
       display: flex;
       flex-wrap: wrap;
+    }
+
+    &--extra-nav {
+      margin-top: 30px;
     }
   }
 }

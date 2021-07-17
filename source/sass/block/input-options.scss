@@ -1,12 +1,13 @@
 .input-options {
   margin: 0;
   padding: 0;
-  padding-bottom: 28px;
+  padding-bottom: 20px;
   list-style: none;
 }
 
 .input-options__item {
   margin: 0;
+  margin-bottom: 8px;
   padding: 0;
   line-height: 14px;
 }
@@ -14,10 +15,10 @@
 .input-options input[type="checkbox"]+label::before {
   content: "";
   position: absolute;
-  left: 0;
+  left: 14px;
   top: 2px;
-  width: 16px;
-  height: 16px;
+  width: 15px;
+  height: 15px;
   border: 1px solid $brown;
   color: $white;
 
@@ -42,4 +43,13 @@ input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input[type="number"]:hover,
+input[type="number"]:focus {
+  -moz-appearance: number-input;
 }

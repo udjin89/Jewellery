@@ -78,6 +78,10 @@
     color: $white;
     background-color: $brown;
   }
+
+  @include mobile {
+    margin-bottom: 40px;
+  }
 }
 
 .button--filter-apply,

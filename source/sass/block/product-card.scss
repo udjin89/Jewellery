@@ -14,7 +14,7 @@
   text-align: center;
 
   @include mobile {
-    margin-top: 10px;
+    margin-top: 12px;
   }
 
 }
@@ -49,14 +49,25 @@
 
 .product-card--catalog {}
 
+.product-card--catalog p {
+  margin-top: 7px;
+
+  @include tablet {
+    margin-top: 6px;
+  }
+}
+
 .product-card--catalog img {
   max-width: 270px;
   width: 100%;
   height: auto;
+  max-height: 272px;
 
   @include tablet {
-    max-width: 206px;
+    // max-width: 206px;
   }
 
-  @include mobile {}
+  @include mobile {
+    min-height: 136px;
+  }
 }
