@@ -1,12 +1,27 @@
+.article-card {
+  margin-top: 80px;
+
+  @include tablet {
+    margin-top: 57px;
+  }
+
+  @include mobile {
+    margin-top: 15px;
+  }
+}
+
 .article-card h1 {
   margin: 0;
   padding: 0;
   @include title;
   font-size: 34px;
-  line-height: 130%;
+
 }
 
 .article-card p {
+  margin: 0;
+  margin-top: 18px;
+  padding: 0;
   font-size: 26px;
   line-height: 130%;
 }
@@ -27,24 +42,46 @@
 
   @include tablet {
     width: 319px;
-    min-width: 290px;
+    // min-width: 290px;
     margin-right: 40px;
   }
 
   @include mobile {
     margin: 0 auto;
+    // width: 100%;
+    // // width: 500px;
+    // min-width: 290px;
+    width: 290px;
+    height: 260px;
   }
 }
 
 .article-card__item {
-  margin-right: 100px;
+  margin-right: 97px;
+  margin-top: -5px;
+  padding-left: 0;
+  max-width: 370px;
 
   @include tablet {
     margin-right: 0;
+    padding-left: 0;
+    min-width: 319px;
+    width: 100%;
+  }
+
+  @include mobile {
+    margin-top: 47px;
+    min-width: 270px;
   }
 }
 
-.article-card__tab {}
+.article-card__tab {
+  margin-top: 30px;
+
+  @include mobile {
+    margin-top: 20px;
+  }
+}
 
 .article-card__control {
   margin: 0;
@@ -56,6 +93,10 @@
 
 .article-card__control-item {
   margin-right: 35px;
+
+  @include mobile {
+    margin-right: 40px;
+  }
 }
 
 .article-card__link {
@@ -72,7 +113,7 @@
 
 .article-card__description {
   margin: 0;
-  margin-top: 40px;
+  margin-top: 15px;
   padding: 0;
   // width: 100%;
   display: grid;
@@ -82,8 +123,8 @@
 .article-card__description dd,
 .article-card__description dt {
   margin: 0;
-  padding: 0;
-  border-bottom: 2px solid tomato;
+  padding: 13px 0 10px 0;
+  border-bottom: 1px solid #f6f5f4;
 }
 
 .article-card__description dd {

@@ -200,22 +200,25 @@ const sliderThumbs = new Swiper('.slider__thumbs .swiper-container', { // ище
   slidesPerView: 3, // показывать по 3 превью
   spaceBetween: 24, // расстояние между слайдами
   freeMode: true,// при перетаскивании превью ведет себя как при скролле
+  // initialSlide: 1,
   breakpoints: { // условия для разных размеров окна браузера
     0: { // при 0px и выше
       direction: 'horizontal', // горизонтальная прокрутка
       spaceBetween: 14,
     }, 1024: { // при 1024px и выше
       direction: 'vertical', // вертикальная прокрутка
+      spaceBetween: 30,
     }
   },
-});// Инициализация слайдера изображенийconst
+});
 
-sliderImages = new Swiper('.slider__images .swiper-container', { // ищем слайдер превью по селектору
+const sliderImages = new Swiper('.slider__images .swiper-container', { // ищем слайдер превью по селектору
   // задаем параметры
   direction: 'vertical', // вертикальная прокрутка
   slidesPerView: 1, // показывать по 1 изображению
   spaceBetween: 32, // расстояние между слайдами
   mousewheel: true, // можно прокручивать изображения колёсиком мыши
+  // initialSlide: 1,
   navigation: { // задаем кнопки навигации
     nextEl: '.slider__next', // кнопка Next
     prevEl: '.slider__prev' // кнопка Prev
@@ -228,19 +231,40 @@ sliderImages = new Swiper('.slider__images .swiper-container', { // ищем с�
     0:
     { // при 0px и выше
       direction: 'horizontal', // горизонтальная прокрутка
-      spaceBetween: 14,
+      spaceBetween: 0,
       pagination: {
-        el: '.slider__images .swiper-pagination',
-        type: 'fraction',
+        el: '.swiper-pagination',
+        type: 'custom',
+        renderCustom: function (swiper, current, total) {
+          return current + '  of  ' + (total);
+        }
       },
+    },
+    768:
+    { // при 0px и выше
+      direction: 'horizontal', // горизонтальная прокрутка
+      spaceBetween: 14,
     },
     1024: { // при 768px и выше
       direction: 'vertical', // вертикальная прокрутка
+      spaceBetween: 30,
     }
   },
 });
 
-const swiper = new Swiper('.products .swiper-container', {
+window.addEventListener('resize', event => {
+  if (screen.width < 1024) {
+    // swiper.pagination.destroy();
+    swiper.pagination.update();
+    swiper.pagination.render();
+
+    // sliderImages.pagination.destroy();
+    sliderImages.pagination.update();
+    sliderImages.pagination.render();
+  }
+}, false);
+
+const swiper = new Swiper('.products--main .swiper-container', {
   speed: 400,
   observer: true,
   observeParents: true,
@@ -314,12 +338,89 @@ const swiper = new Swiper('.products .swiper-container', {
   },
 });
 
+const swiper2 = new Swiper('.products--card .swiper-container', {
+  speed: 400,
+  observer: true,
+  observeParents: true,
+  // spaceBetween: 30,
+  loop: true,
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    // when window width is >= 320px
+    100: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 30,
+      allowTouchMove: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        type: 'custom',
+        renderCustom: function (swiper, current, total) {
+          return current + '  of  ' + (total);
+        }
+      },
+    },
+    768: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 30,
+      allowTouchMove: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        type: 'bullets',
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '"> ' + (index + 1) + '</span>';
+        },
+      },
+    },
+    // when window width is >= 640px
+    1024: {
+      slidesPerView: 4,
+      slidesPerGroup: 4,
+      spaceBetween: 10,
+      allowTouchMove: false,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        type: 'bullets',
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '"> ' + (index + 1) + '</span>';
+        },
+      },
+    },
+    1190: {
+      slidesPerView: 4,
+      slidesPerGroup: 4,
+      spaceBetween: 30,
+      allowTouchMove: false,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        type: 'bullets',
+        renderBullet: function (index, className) {
+          return '<span class="' + className + '"> ' + (index + 1) + '</span>';
+        },
+      },
+    },
+  },
+});
 
 window.addEventListener(`resize`, event => {
   if (screen.width < 1024) {
     // swiper.pagination.destroy();
     swiper.pagination.update();
     swiper.pagination.render();
+
+    sliderImages.pagination.destroy();
+    sliderImages.pagination.update();
+    sliderImages.pagination.render();
   }
 }, false);
 

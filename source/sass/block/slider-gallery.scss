@@ -1,21 +1,25 @@
 .slider {
-  // padding: 32px;
-  /* color: #fff; */
   color: green;
   max-height: 435px;
+
+
 }
 
-.swiper-slide1 {
-  flex-shrink: 0;
-  // width: 100%;
-  height: 100%;
-  position: relative;
-  transition-property: transform;
-}
+// .swiper-slide {
+//   flex-shrink: 0;
+//   width: 100%;
+//   // height: 100%;
+//   position: relative;
+//   transition-property: transform;
+// }
 
 .slider .swiper-container {
   width: 100%;
   height: 100%;
+
+  @include mobile {
+    height: auto;
+  }
 }
 
 .slider__flex {
@@ -28,12 +32,26 @@
   flex-direction: column;
   width: 100px;
   margin-right: 32px;
+
+  @include tablet {
+    width: 100%;
+    height: 129px;
+  }
 }
 
 .slider__thumbs {
+  width: inherit;
   // width: 100px;
   // height: 400px;
   height: 435px;
+
+  @include tablet {
+    height: 129px;
+  }
+}
+
+.slider__thumbs .swiper-wrapper {
+  transform: translate3d(-111px, 0px, 0px);
 }
 
 .slider__thumbs .slider__image {
@@ -43,6 +61,11 @@
   opacity: 0.5;
   width: 100px;
   height: 125px;
+
+  @include tablet {
+    width: 97px;
+    height: 129px;
+  }
 }
 
 .slider__thumbs .slider__image:hover {
@@ -61,6 +84,25 @@
   @include tablet {
     height: 286px;
   }
+
+  @include mobile {
+    // height: 435px;
+    // height: 100%;
+    // width: 100%;
+    // height: auto;
+
+  }
+}
+
+.slider__images .swiper-pagination {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+  font-weight: 500;
+  font-size: 14px;
+  margin-top: -35px;
+  color: $black;
 }
 
 .slider__images .slider__image img {
@@ -72,20 +114,32 @@
 }
 
 .slider__image {
-  width: 100%;
-  height: 100%;
+  // width: 100%;
+  // height: 100%;
 
-  /* border-radius: 30px;   */
-  overflow: hidden;
+  // /* border-radius: 30px;   */
+  // overflow: hidden;
+  @include mobile {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+  }
 }
 
 .slider__image img {
-  display: block;
+  // display: block;
   width: 100%;
   height: 100%;
 
-  // -o-object-fit: cover;
+  -o-object-fit: cover;
   object-fit: cover;
+
+  @include mobile {
+    // width: 100%;
+    // height: auto;
+    width: 290px;
+    height: 260px;
+  }
 }
 
 @media (max-width: 1023.98px) {
@@ -105,12 +159,7 @@
     width: 100%;
   }
 
-  .slider__thumbs {
-    height: 100px;
-    width: inherit;
-    // width: calc(100% - 96px);
-    // margin: 0 16px;
-  }
+
 
   .slider__thumbs .swiper-slide {
     width: 97px;
@@ -130,7 +179,7 @@
 
   @media(max-width: 339.5px) {
     .slider__images {
-      padding-right: 14px;
+      // padding-right: 14px;
     }
   }
 }

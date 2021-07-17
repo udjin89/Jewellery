@@ -124,6 +124,20 @@
   font-size: 16px;
 }
 
+.button--add-to-card {
+  margin-top: 50px;
+  margin-bottom: 15px;
+  width: 370px;
+
+  @include tablet {
+    width: auto;
+  }
+
+  @include mobile {
+    margin-top: 37px;
+  }
+}
+
 .button--checkout {
   margin: 0;
   width: 200px;

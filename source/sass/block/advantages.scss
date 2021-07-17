@@ -4,6 +4,7 @@
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .advantages__item {
@@ -13,8 +14,32 @@
   color: $grey;
 
   &:not(:last-of-type) {
-    border-right: 1px solid tomato;
-    margin-right: 14px;
+    border-right: 1px solid #f6f5f4;
+    // margin-right: 14px;
     padding-right: 13px;
+  }
+
+  @include tablet {
+    font-size: 12px;
+  }
+
+  @include mobile {
+    text-align: center;
+    width: 60px;
+
+    &:not(:last-of-type) {
+      position: relative;
+      border-right: none;
+
+      &:after {
+        position: absolute;
+        content: "";
+        top: 0;
+        right: -28px;
+        width: 1px;
+        height: 20px;
+        background-color: #f6f5f4;
+      }
+    }
   }
 }

@@ -1,11 +1,17 @@
 .menu {
   margin-top: 13px;
-  border-top: 1px solid #F6F5F4;
+  border-top: 1px solid #f6f5f4;
+
+  &--product {
+    padding-bottom: 19px;
+    border-bottom: 1px solid #f6f5f4;
+  }
 
   @include tablet {
     border: none;
     display: none;
   }
+
 }
 
 .menu__login {
