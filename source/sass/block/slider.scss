@@ -59,7 +59,6 @@
 
 .products .swiper-pagination-bullet-active {
   color: $black;
-  // background: #007aff;
 }
 
 .products .swiper-button-prev,
@@ -69,7 +68,6 @@
   top: 60px;
   width: 100px;
   height: 100px;
-  // background-color: pink;
   background-image: url("../img/icon/arrow-slider.svg");
   background-repeat: no-repeat;
   background-position: left;
@@ -100,5 +98,4 @@
 .products--card .swiper-pagination {
   width: 50px;
   height: 50px;
-  background-color: pink;
 }

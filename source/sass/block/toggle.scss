@@ -29,11 +29,9 @@
   position: absolute;
   top: 22px;
   left: 15px;
-  // right: 15px;
   width: 25px;
   height: 2px;
   background-color: $black;
-  // transition: background 0s 0.3s;
 }
 
 .toggle span::before,
@@ -45,13 +43,10 @@
   height: 2px;
   background-color: $black;
   content: "";
-  // transition-duration: 0.3s, 0.3s;
-  // transition-delay: 0.3s, 0s;
 }
 
 .toggle span::before {
   top: -8px;
-  // transition-property: top, transform;
 }
 
 .toggle span::after {
@@ -70,33 +65,9 @@
   opacity: 0.7;
 }
 
-// ++++++++++++++++++++++++++++++++++++++++++=
-.span::after {
-  // transition-property: bottom, transform;
-}
-
-/* состояние active при открытом меню  */
-.toggle.is-active {
-  // background-color: $white;
-}
-
-.toggle.is-active span {
-  // background: none;
-}
-
-.toggle.is-active span::before {
-  // top: 0;
-  // transform: rotate(45deg);
-}
-
-.toggle.is-active span::after {
-  // bottom: 0;
-  // transform: rotate(-45deg);
-}
-
+// ++++++++++++++++++++++++++++++++++++++++++
 .toggle.is-active span,
 .toggle.is-active span::before,
 .toggle.is-active span::after {
   background-color: $white;
-  // transition-delay: 0s, 0.3s;
 }
