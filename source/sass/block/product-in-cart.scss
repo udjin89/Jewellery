@@ -72,8 +72,7 @@
     left: - 35px;
     width: 500px;
     height: 1px;
-    background-color: #f6f5f4;
-    // background-color: red;
+    background-color: $light-grey;
   }
 
   @include mobile {

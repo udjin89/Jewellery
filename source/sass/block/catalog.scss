@@ -32,29 +32,17 @@
   height: min-content;
 
   @include tablet {
-    // position: absolute;
     z-index: 2;
     margin-top: 20px;
-    // margin-left: 15px;
-    // margin-right: 15px;
     padding-bottom: 50px;
     left: 50%;
     transform: translateX(-50%);
-    // top: 50%;
-    // transform: translateY(-50%);
-    // left: 0;
-    // right: 0;
     display: none;
     position: absolute;
-    // position: fixed;
     max-width: 458px;
     width: 89%;
     background-color: $white;
     box-shadow: 0 5px 32px rgba(219, 213, 208, 0.24);
-    // overflow: scroll;
-    // overflow-y: scroll;
-    // height: 80vh;
-    // height: 100%;
   }
 }
 
@@ -64,7 +52,6 @@
 
   @include tablet {
     display: block;
-    // padding: 0 15px;
   }
 }
 
@@ -85,7 +72,6 @@
 
 .catalog__product-item {
   max-width: 270px;
-  // margin-right: 5px;
 
   @include tablet {
     margin: 0 auto;

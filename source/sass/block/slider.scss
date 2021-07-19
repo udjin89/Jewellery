@@ -1,10 +1,8 @@
 .products .swiper-container {
   margin-top: -145px;
   width: 100%;
-  // min-width: 200px;
 
   @include tablet {
-    // width: 680px;
     margin-top: -150px;
   }
 
@@ -17,7 +15,6 @@
 .products--card .swiper-pagination1 {
   position: absolute;
   bottom: -62px;
-  // transform: translateY(-100%);
   left: 50%;
   transform: translateX(-50%);
 
@@ -34,8 +31,6 @@
 }
 
 .products .swiper-pagination-bullet {
-  // line-height: 130%;
-  // margin-right: 5px;
   padding: 5px 5px;
   border-radius: 0;
   width: auto;
@@ -64,7 +59,6 @@
 .products .swiper-button-prev,
 .products .swiper-button-next {
   position: relative;
-  // z-index: 10;
   top: 60px;
   width: 100px;
   height: 100px;

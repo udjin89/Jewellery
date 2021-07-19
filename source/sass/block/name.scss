@@ -6,7 +6,6 @@
 
   background-image: url("../img/background/main.jpg");
   background-repeat: no-repeat;
-  // background-position-x: center;
   background-size: cover;
 
   @include retina {
@@ -15,8 +14,6 @@
 
   @include tablet {
     margin-top: 25px;
-    // min-height: 0;
-    // padding-bottom: 160px;
     background-image: url("../img/background/main-tablet.jpg");
     background-position-x: center;
 
@@ -27,7 +24,6 @@
 
   @include mobile {
     margin-top: 15px;
-    // padding-bottom: 73px;
     background-image: url("../img/background/main-mobile.jpg");
 
     @include retina {
@@ -111,6 +107,5 @@
 
   @include mobile {
     line-height: 25px;
-    // letter-spacing: 0.001px;
   }
 }
