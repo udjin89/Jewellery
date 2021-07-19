@@ -50,7 +50,7 @@
     max-width: 458px;
     width: 89%;
     background-color: $white;
-    box-shadow: 0px 5px 32px rgba(219, 213, 208, 0.24);
+    box-shadow: 0 5px 32px rgba(219, 213, 208, 0.24);
     // overflow: scroll;
     // overflow-y: scroll;
     // height: 80vh;
@@ -68,7 +68,7 @@
   }
 }
 
-.cataglog__product-list {
+.catalog__product-list {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -83,7 +83,7 @@
   }
 }
 
-.cataglog__product-item {
+.catalog__product-item {
   max-width: 270px;
   // margin-right: 5px;
 
@@ -143,15 +143,15 @@
     position: absolute;
     content: "";
     top: 50%;
-    right: 50px;
-    height: 16px;
+    right: 25px;
+    height: 14px;
     width: 1px;
     background-color: $brown;
   }
 
   &::before {
 
-    transform: translate(-11px, -50%) rotate(-45deg);
+    transform: translate(-10px, -50%) rotate(-45deg);
   }
 
   &::after {
@@ -186,7 +186,7 @@
 .catalog__item--active h3 {
   &::before {
 
-    transform: translate(-11px, -50%) rotate(45deg);
+    transform: translate(-10px, -50%) rotate(45deg);
   }
 
   &::after {
@@ -216,8 +216,6 @@
   @include tablet {
     margin-left: 50px;
   }
-
-  @include mobile {}
 }
 
 .catalog__pagination {

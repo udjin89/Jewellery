@@ -1,24 +1,3 @@
-.panel-active {}
-
-.panel-active~p {
+.panel-active ~ p {
   display: block;
-  // position: relative;
-  // // width: 100%;
-  // height: auto;
-  // overflow: none;
-  // opacity: 1;
 }
-
-// .panel-active {
-//   &::before {
-//     display: none;
-//   }
-// }
-
-// .panel-active + .contact-footer__list {
-//   padding-bottom: 28px;
-// }
-
-// .panel-active ~ .navigation__list:last-of-type {
-//   padding-bottom: 28px;
-// }

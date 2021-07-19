@@ -21,6 +21,7 @@ function bindModal(triggerSelector, modalSelector, closeSelector) //  Перед
         if (evt.target) {
           evt.preventDefault();
         }
+        closeMenu();
         overlay.classList.remove('hidden');
         modal.classList.remove('hidden');
         modal.classList.add("modal-show-x");
@@ -31,17 +32,17 @@ function bindModal(triggerSelector, modalSelector, closeSelector) //  Перед
     });
 
     close.addEventListener('click', () => {
-      closeModal()
+      closeModal();
     });
     window.addEventListener('keydown', function (evt) {
       if (evt.key === 'Escape' || evt.key === 'Esc') {
         evt.preventDefault();
-        closeModal()
+        closeModal();
       }
     });
     overlay.addEventListener('click', function (evt) {
       evt.preventDefault();
-      closeModal()
+      closeModal();
     });
 
   }
@@ -49,6 +50,6 @@ function bindModal(triggerSelector, modalSelector, closeSelector) //  Перед
 }
 
 // 1- Элемент на который нажимаем, 2- модальное окно, 3-кнопка крестик для закрытия
-bindModal('.button--login', '.modal--login', '.modal--login .button--close');
+bindModal('.login', '.modal--login', '.modal--login .button--close');
 bindModal('.button--add-to-card', '.modal--cart', '.modal--cart .button--close');
 // bindModal('.button--filter', '.catalog__grid form', '.catalog__grid .button--close-filter');

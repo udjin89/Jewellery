@@ -1,5 +1,5 @@
 .article-card {
-  margin-top: 80px;
+  margin-top: 100px;
 
   @include tablet {
     margin-top: 57px;
@@ -13,9 +13,9 @@
 .article-card h1 {
   margin: 0;
   padding: 0;
+
   @include title;
   font-size: 34px;
-
 }
 
 .article-card p {
@@ -33,7 +33,6 @@
   @include mobile {
     display: block;
   }
-
 }
 
 .article-card__slider {
@@ -61,6 +60,10 @@
   margin-top: -5px;
   padding-left: 0;
   max-width: 370px;
+
+  @media screen and (max-width: 1200px) {
+    margin-right: 30px;
+  }
 
   @include tablet {
     margin-right: 0;

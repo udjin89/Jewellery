@@ -8,8 +8,6 @@ img {
   max-width: 100%;
 }
 
-
-
 .hidden {
   display: block;
   position: absolute;
@@ -79,19 +77,14 @@ html {
   font-size: 30px;
   line-height: 30px;
   color: $black;
-
 }
 
 .page__body {
   height: 100%;
-  min-height: 100vh; // display: grid;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  // grid-template-rows: min-content 1fr min-content;
-  // align-content: start;/
 }
-
-
 
 .main {
   /* 1 flex-grow, 0 flex-shrink, auto flex-basis */

@@ -4,7 +4,6 @@
 
   &:last-of-type {
     border: none;
-
   }
 }
 
@@ -71,6 +70,7 @@
 
     &::before,
     &::after {
+      top: 30%;
       right: 26px;
     }
   }
@@ -95,6 +95,12 @@
 
   @include tablet {
     padding-bottom: 25px;
+
+    &::before,
+    &::after {
+      top: 30%;
+      right: 26px;
+    }
   }
 }
 

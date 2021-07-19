@@ -60,6 +60,13 @@ const sliderImages = new Swiper('.slider__images .swiper-container', { // ище
     1024: { // при 768px и выше
       direction: 'vertical', // вертикальная прокрутка
       spaceBetween: 30,
+      pagination: {
+        el: '.swiper-pagination-gallery',
+        type: 'custom',
+        renderCustom: function (swiper, current, total) {
+          return '';
+        }
+      },
     }
   },
 });

@@ -84,7 +84,7 @@ const createWebp = () => {
     .pipe(gulp.dest("build/img"))
 }
 
-exports.createWebp = createWebp; // Обьявление, для запуска из консоли задачи: gulp styles
+exports.createWebp = createWebp; // Обьявление, для запуска из консоли задачи: gulp createWebp
 
 // Sprite
 
@@ -100,7 +100,7 @@ exports.sprite = sprite;
 const copy = (done) => {
   // берем файлы указаные в массиве // "source/img/**/*.{jpg,png,svg}" для копирования изображений
   return gulp.src([
-    "source/img/**/*.{jpg,png,svg}",
+    // "source/img/**/*.{jpg,png,svg}",
     "source/fonts/*.{woff2,woff}",
     "source/*.ico"
   ],
@@ -179,8 +179,8 @@ exports.default = gulp.series(
     sprite,
     script,
     concatjs,
-    // images,
-    // createWebp
+    images,
+    createWebp
   ),
   gulp.series(
     server,

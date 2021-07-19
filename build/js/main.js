@@ -105,7 +105,9 @@ const menuNav = document.querySelector('.navigation');
 const body = document.querySelector('.page__body');
 
 // No-js menu
+header.classList.remove('header--no-js');
 header.classList.remove('header--open');
+
 if (menu) {
   menu.classList.remove('menu--open');
 }
@@ -114,6 +116,7 @@ if (menuNav) {
   menuNav.classList.remove('navigation--no-js');
 }
 if (toggle) {
+  toggle.classList.remove('hidden');
   toggle.classList.remove('toggle--off');
 }
 // Кнопка гамбургер
@@ -161,6 +164,7 @@ function bindModal(triggerSelector, modalSelector, closeSelector) //  Перед
         if (evt.target) {
           evt.preventDefault();
         }
+        closeMenu();
         overlay.classList.remove('hidden');
         modal.classList.remove('hidden');
         modal.classList.add("modal-show-x");
@@ -171,17 +175,17 @@ function bindModal(triggerSelector, modalSelector, closeSelector) //  Перед
     });
 
     close.addEventListener('click', () => {
-      closeModal()
+      closeModal();
     });
     window.addEventListener('keydown', function (evt) {
       if (evt.key === 'Escape' || evt.key === 'Esc') {
         evt.preventDefault();
-        closeModal()
+        closeModal();
       }
     });
     overlay.addEventListener('click', function (evt) {
       evt.preventDefault();
-      closeModal()
+      closeModal();
     });
 
   }
@@ -189,25 +193,9 @@ function bindModal(triggerSelector, modalSelector, closeSelector) //  Перед
 }
 
 // 1- Элемент на который нажимаем, 2- модальное окно, 3-кнопка крестик для закрытия
-bindModal('.button--login', '.modal--login', '.modal--login .button--close');
+bindModal('.login', '.modal--login', '.modal--login .button--close');
 bindModal('.button--add-to-card', '.modal--cart', '.modal--cart .button--close');
 // bindModal('.button--filter', '.catalog__grid form', '.catalog__grid .button--close-filter');
-
-// Smooth scroll
-// const links = document.querySelectorAll('a[href^="#"]');
-// if (links) {
-//   for (let link of links) {
-//     link.addEventListener('click', function (evt) {
-//       evt.preventDefault();
-//       const id = link.getAttribute('href');
-//       closeMenu();
-//       document.querySelector(id).scrollIntoView({
-//         behavior: 'smooth',
-//         block: 'start'
-//       });
-//     });
-//   };
-// }
 
 const sliderThumbs = new Swiper('.slider__thumbs .swiper-container', { // ищем слайдер превью по селектору
   // задаем параметры
@@ -271,6 +259,13 @@ const sliderImages = new Swiper('.slider__images .swiper-container', { // ище
     1024: { // при 768px и выше
       direction: 'vertical', // вертикальная прокрутка
       spaceBetween: 30,
+      pagination: {
+        el: '.swiper-pagination-gallery',
+        type: 'custom',
+        renderCustom: function (swiper, current, total) {
+          return '';
+        }
+      },
     }
   },
 });

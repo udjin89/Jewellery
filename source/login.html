@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="keywords" content="Perfection,">
-  <meta name="description" content="">
+  <meta name="keywords" content="Jewellery, Perfection, diamond, gold, silver">
+  <meta name="description" content="We made jewellery, necklaces, chokers , rings, earrings">
   <title>Jewellery</title>
   <!-- <link rel="preload" href="fonts/poppins-regular.woff2" as="font"> -->
   <!-- <link rel="preload" href="fonts/poppins-medium.woff2" as="font"> -->
@@ -23,82 +23,19 @@
 
     <div class="container">
       <div class="header__top">
-
-        <button class="toggle" title="menu">
-          <span></span>
-        </button>
-        <div class="header__search">
-          <label for="search" class="hidden">Search</label>
-          <input tabindex="0" id="search" type="search" placeholder="Type here to search">
-          <svg width="14" height="14" viewBox="0 0 17 17" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-            <use xlink:href="img/icon/sprite.svg#loupe"></use>
-          </svg>
-        </div>
-        <a class="logo" href="index.html">
+        <a class="logo logo--login" href="index.html">
           <svg width="66" height="66" viewBox="0 0 66 66" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
             fill="none">
             <use xlink:href="img/icon/sprite.svg#logo"></use>
           </svg>
         </a>
-        <div class="header__cart-area">
-          <a class="header__cart-area-link button--login" href="login.html">Login</a>
-          <a class="header__cart-area-link" href="cart.html">Cart <span>0</span></a>
-          <a class="header__cart-area-link header__cart-area-link--cart" href="cart.html">
-            <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M14 5C14 6.06087 13.5786 7.07828 12.8284 7.82843C12.0783 8.57857 11.0609 9 10 9C8.93913 9 7.92172 8.57857 7.17157 7.82843C6.42143 7.07828 6 6.06087 6 5M1 1H19V17H1V1Z"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-            </svg></a>
-        </div>
-      </div>
-    </div>
-    <div class="menu menu--open">
-      <div class="container">
-        <p class="menu__search">
-          <label for="search-menu" class="hidden">Search</label>
-          <input class="search" id="search-menu" type="search" placeholder="Type here to search">
-          <svg width="16" height="16" viewBox="0 0 17 17" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-            <use xlink:href="img/icon/sprite.svg#loupe"></use>
-          </svg>
-        </p>
-        <nav class="navigation">
-          <ul class="navigation__list">
-            <li class="navigation__item">
-              <a class="navigation__link" href="#">What’s new</a>
-            </li>
-            <li class="navigation__item">
-              <a class="navigation__link" href="#">Chokers</a>
-            </li>
-            <li class="navigation__item">
-              <a class="navigation__link" href="#">Necklaces </a>
-            </li>
-            <li class="navigation__item">
-              <a class="navigation__link" href="#">Rings</a>
-            </li>
-            <li class="navigation__item">
-              <a class="navigation__link" href="#">Earrings</a>
-            </li>
-          </ul>
-        </nav>
-        <ul class="extra-navigation">
-          <li class="extra-navigation__item">
-            <a class="extra-navigation__link" href="#">About CH</a>
-          </li>
-          <li class="extra-navigation__item">
-            <a class="extra-navigation__link" href="#">Stores & Hours</a>
-          </li>
-          <li class="extra-navigation__item">
-            <a class="extra-navigation__link" href="#">Contact Us</a>
-          </li>
-        </ul>
-        <a class="menu__login button--login" href="login.html">Login</a>
       </div>
     </div>
 
   </header>
 
   <main class="main">
-    <div class="modal modal--login modal--page">
+    <div class="modal modal--login-static modal--page">
 
       <h2>Log In</h2>
       <form action="https://echo.htmlacademy.ru" method="post">
@@ -117,7 +54,6 @@
 
         </div>
       </form>
-      <button class="button button--close" aria-label="Закрыть"></button>
     </div>
   </main>
 

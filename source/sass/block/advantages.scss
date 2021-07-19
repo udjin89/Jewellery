@@ -35,7 +35,7 @@
       position: relative;
       border-right: none;
 
-      &:after {
+      &::after {
         position: absolute;
         content: "";
         top: 0;

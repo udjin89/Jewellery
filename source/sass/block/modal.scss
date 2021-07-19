@@ -34,6 +34,7 @@
 .modal h2 {
   margin: 0;
   padding: 0;
+
   @include title;
   font-size: 34px;
   line-height: 130%;
@@ -85,10 +86,12 @@
   text-decoration: none;
 }
 
-.modal--login {
+.modal--login,
+.modal--login-static {
   padding-top: 185px;
   background-image: url("../img/background/login-bg.jpg");
   background-repeat: no-repeat;
+  background-size: 100% 138px;
 
   @include retina {
     background-image: url("../img/background/login-bg@2x.jpg");
@@ -100,7 +103,8 @@
   }
 }
 
-.modal--login h2 {
+.modal--login h2,
+.modal--login-static h2 {
   margin-bottom: 25px;
 }
 
@@ -121,7 +125,7 @@
   padding: 50px 35px;
   max-width: 500px;
   background-color: $white;
-  box-shadow: 0px 4px 32px rgba(121, 121, 121, 0.24);
+  box-shadow: 0 4px 32px rgba(121, 121, 121, 0.24);
 
   @include mobile {
     min-width: 290px;
@@ -145,4 +149,5 @@
   position: relative;
   transform: none;
   z-index: 0;
+  margin: 50px auto;
 }

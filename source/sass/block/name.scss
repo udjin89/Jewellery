@@ -50,20 +50,20 @@
 
     @include tablet {
 
-      background-image: url("../img/background/catalog.jpg");
+      background-image: url("../img/background/catalog-tablet.jpg");
       background-position-x: center;
 
       @include retina {
-        background-image: url("../img/background/catalog@2x.jpg");
+        background-image: url("../img/background/catalog-tablet@2x.jpg");
       }
     }
 
     @include mobile {
       padding-top: 87px;
-      background-image: url("../img/background/catalog.jpg");
+      background-image: url("../img/background/catalog-mobile.jpg");
 
       @include retina {
-        background-image: url("../img/background/catalog@2x.jpg");
+        background-image: url("../img/background/catalog-mobile@2x.jpg");
       }
     }
   }
@@ -102,7 +102,6 @@
 
 .name--catalog h1 {
   font-size: 34px;
-
 }
 
 .name--catalog p {

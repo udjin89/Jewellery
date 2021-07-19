@@ -5,7 +5,9 @@ const menuNav = document.querySelector('.navigation');
 const body = document.querySelector('.page__body');
 
 // No-js menu
+header.classList.remove('header--no-js');
 header.classList.remove('header--open');
+
 if (menu) {
   menu.classList.remove('menu--open');
 }
@@ -14,6 +16,7 @@ if (menuNav) {
   menuNav.classList.remove('navigation--no-js');
 }
 if (toggle) {
+  toggle.classList.remove('hidden');
   toggle.classList.remove('toggle--off');
 }
 // Кнопка гамбургер

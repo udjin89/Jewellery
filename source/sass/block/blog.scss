@@ -9,6 +9,7 @@
 .blog h2 {
   margin: 0;
   padding: 0;
+
   @include title;
   font-size: 34px;
   line-height: 130%;
@@ -23,7 +24,7 @@
   grid-row-gap: 30px;
   grid-column-gap: 30px;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 300px 300px;
+  grid-template-rows: 300px minmax(200px, 300px);
 
   @include tablet {
     grid-auto-flow: row;
@@ -41,8 +42,9 @@
 
 .blog__article {
 
-  background-color: pink;
+  background-color: $light-beige;
   background-repeat: no-repeat;
+  background-size: contain;
 
   @include mobile {
     height: 512px;
@@ -68,6 +70,7 @@
   &--blog-power {
     background-image: url("../img/content/alex-holyoake-unsplash-blog-power-desktop.jpg");
     background-position-x: right;
+    // background-size: cover;
 
     @include retina {
       background-image: url("../img/content/alex-holyoake-unsplash-blog-power-desktop@2x.jpg");
@@ -85,13 +88,25 @@
 
   &--blog-trends {
     background-image: url("../img/content/alve-odonnell-unsplash-blog-trends-desktop.jpg");
+    background-size: cover;
 
     @include retina {
       background-image: url("../img/content/alve-odonnell-unsplash-blog-trends-desktop@2x.jpg");
     }
 
+    @include tablet {
+      background-size: 50%;
+      background-image: url("../img/content/alve-odonnell-blog-trends-tablet.jpg");
+
+      @include retina {
+        background-size: 50%;
+        background-image: url("../img/content/alve-odonnell-blog-trends-tablet.jpg");
+      }
+    }
+
     @include mobile {
       background-size: 100% 256px;
+      // background-size: contain;
       background-image: url("../img/content/alve-odonnell-blog-trends-mobile.jpg");
 
       @include retina {
@@ -116,6 +131,7 @@
   margin-top: 13px;
   margin-bottom: 30px;
   padding: 0 40px;
+
   @include title;
   font-weight: 600;
   font-size: 26px;

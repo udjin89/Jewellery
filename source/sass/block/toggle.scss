@@ -58,6 +58,18 @@
   bottom: -8px;
 }
 
+.toggle:hover span,
+.toggle:hover span::after,
+.toggle:hover span::before {
+  background-color: $brown;
+}
+
+.toggle:active span,
+.toggle:active span::after,
+.toggle:active span::before {
+  opacity: 0.7;
+}
+
 // ++++++++++++++++++++++++++++++++++++++++++=
 .span::after {
   // transition-property: bottom, transform;

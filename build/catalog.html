@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="keywords" content="Perfection,">
-  <meta name="description" content="">
+  <meta name="keywords" content="Jewellery, Perfection, diamond, gold, silver">
+  <meta name="description" content="Our catalog jewellery, necklaces, chokers , rings, earrings">
   <title>Jewellery</title>
   <!-- <link rel="preload" href="fonts/poppins-regular.woff2" as="font"> -->
   <!-- <link rel="preload" href="fonts/poppins-medium.woff2" as="font"> -->
@@ -17,12 +17,12 @@
 </head>
 
 <body class="page__body">
-  <header class="header header--open">
+  <header class="header header--open header--no-js">
 
     <div class="container">
       <div class="header__top">
 
-        <button class="toggle" title="menu">
+        <button class="toggle hidden" title="menu">
           <span></span>
         </button>
         <div class="header__search">
@@ -39,7 +39,7 @@
           </svg>
         </a>
         <div class="header__cart-area">
-          <a class="header__cart-area-link button--login" href="login.html">Login</a>
+          <a class="header__cart-area-link login" href="login.html">Login</a>
           <a class="header__cart-area-link" href="cart.html">Cart <span>0</span></a>
           <a class="header__cart-area-link header__cart-area-link--cart" href="cart.html">
             <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -59,7 +59,7 @@
             <use xlink:href="img/icon/sprite.svg#loupe"></use>
           </svg>
         </p>
-        <nav class="navigation">
+        <nav class="navigation navigation--open">
           <ul class="navigation__list">
             <li class="navigation__item">
               <a class="navigation__link" href="#">What’s new</a>
@@ -89,7 +89,7 @@
             <a class="extra-navigation__link" href="#">Contact Us</a>
           </li>
         </ul>
-        <a class="menu__login button--login" href="login.html">Login</a>
+        <a class="menu__login login" href="login.html">Login</a>
       </div>
     </div>
 
@@ -165,7 +165,7 @@
                 <div class="range-filter">
                   <div class="range-filter__control">
                     <div class="scale">
-                      <div class="bar" style="width: 50%; margin-left: 28%;"></div>
+                      <div class="bar" style="width: 50%; margin-left: 25%;"></div>
                     </div>
 
                     <button type="button" class="toggle-control toggle-control--min" aria-label="left-toggle"
@@ -189,11 +189,13 @@
             </div>
 
           </form>
-          <ul class="cataglog__product-list">
-            <li class="cataglog__product-item">
+          <ul class="catalog__product-list">
+            <li class="catalog__product-item">
               <a class="product-card product-card--catalog" href="#">
                 <picture>
-                  <!-- <source srcset="img/content/bike-type1.webp 1x, img/content/bike-type1@2x.webp 2x" type="image/webp"> -->
+                  <source
+                    srcset="img/content/double-pearl-earrings.webp 1x, img/content/double-pearl-earrings@2x.webp 2x"
+                    type="image/webp">
                   <!-- 1x: 270px 284px, 2x: 540px 568px -->
                   <img src="img/content/double-pearl-earrings.jpg" srcset="img/content/double-pearl-earrings@2x.jpg 2x"
                     alt="double pearl earrings" width="270" height="284">
@@ -202,10 +204,12 @@
                 <p>$ 115</p>
               </a>
             </li>
-            <li class="cataglog__product-item">
+            <li class="catalog__product-item">
               <a class="product-card product-card--catalog" href="#">
                 <picture>
-                  <!-- <source srcset="img/content/bike-type1.webp 1x, img/content/bike-type1@2x.webp 2x" type="image/webp"> -->
+                  <source
+                    srcset="img/content/black-choker-gold-bead.webp 1x, img/content/black-choker-gold-bead@2x.webp 2x"
+                    type="image/webp">
                   <!-- 1x: 270px 284px, 2x: 540px 568px -->
                   <img src="img/content/black-choker-gold-bead.jpg"
                     srcset="img/content/black-choker-gold-bead@2x.jpg 2x" alt="Choker with gold bead" width="270"
@@ -215,10 +219,12 @@
                 <p>$ 55</p>
               </a>
             </li>
-            <li class="cataglog__product-item">
+            <li class="catalog__product-item">
               <a class="product-card product-card--catalog" href="#">
                 <picture>
-                  <!-- <source srcset="img/content/bike-type1.webp 1x, img/content/bike-type1@2x.webp 2x" type="image/webp"> -->
+                  <source
+                    srcset="img/content/gold-layered-necklace.webp 1x, img/content/gold-layered-necklace@2x.webp 2x"
+                    type="image/webp">
                   <!-- 1x: 270px 284px, 2x: 540px 568px -->
                   <img src="img/content/gold-layered-necklace.jpg" srcset="img/content/gold-layered-necklace@2x.jpg 2x"
                     alt="Gold layered necklace" width="270" height="284">
@@ -227,10 +233,12 @@
                 <p>$ 155</p>
               </a>
             </li>
-            <li class="cataglog__product-item">
+            <li class="catalog__product-item">
               <a class="product-card product-card--catalog" href="#">
                 <picture>
-                  <!-- <source srcset="img/content/bike-type1.webp 1x, img/content/bike-type1@2x.webp 2x" type="image/webp"> -->
+                  <source
+                    srcset="img/content/blue-gemstone-pendant.webp 1x, img/content/blue-gemstone-pendant@2x.webp 2x"
+                    type="image/webp">
                   <!-- 1x: 270px 284px, 2x: 540px 568px -->
                   <img src="img/content/blue-gemstone-pendant.jpg" srcset="img/content/blue-gemstone-pendant@2x.jpg 2x"
                     alt="blue gemstone pendant" width="270" height="284">
@@ -239,10 +247,11 @@
                 <p>$ 105</p>
               </a>
             </li>
-            <li class="cataglog__product-item">
+            <li class="catalog__product-item">
               <a class="product-card product-card--catalog" href="#">
                 <picture>
-                  <!-- <source srcset="img/content/bike-type1.webp 1x, img/content/bike-type1@2x.webp 2x" type="image/webp"> -->
+                  <source srcset="img/content/boho-earrings.webp 1x, img/content/boho-earrings@2x.webp 2x"
+                    type="image/webp">
                   <!-- 1x: 270px 284px, 2x: 540px 568px -->
                   <img src="img/content/boho-earrings.jpg" srcset="img/content/boho-earrings@2x.jpg 2x"
                     alt="boho earrings" width="270" height="284">
@@ -251,10 +260,11 @@
                 <p>$ 75</p>
               </a>
             </li>
-            <li class="cataglog__product-item">
+            <li class="catalog__product-item">
               <a class="product-card product-card--catalog" href="#">
                 <picture>
-                  <!-- <source srcset="img/content/bike-type1.webp 1x, img/content/bike-type1@2x.webp 2x" type="image/webp"> -->
+                  <source srcset="img/content/bird-necklace.webp 1x, img/content/bird-necklace@2x.webp 2x"
+                    type="image/webp">
                   <!-- 1x: 270px 284px, 2x: 540px 568px -->
                   <img src="img/content/bird-necklace.jpg" srcset="img/content/bird-necklace@2x.jpg 2x"
                     alt="bird necklace" width="270" height="284">
@@ -263,10 +273,12 @@
                 <p>$ 135</p>
               </a>
             </li>
-            <li class="cataglog__product-item">
+            <li class="catalog__product-item">
               <a class="product-card product-card--catalog" href="#">
                 <picture>
-                  <!-- <source srcset="img/content/bike-type1.webp 1x, img/content/bike-type1@2x.webp 2x" type="image/webp"> -->
+                  <source
+                    srcset="img/content/black-leather-choker-necklace.webp 1x, img/content/black-leather-choker-necklace@2x.webp 2x"
+                    type="image/webp">
                   <!-- 1x: 270px 284px, 2x: 540px 568px -->
                   <img src="img/content/black-leather-choker-necklace.jpg"
                     srcset="img/content/black-leather-choker-necklace@2x.jpg 2x" alt="black leather choker necklace"
@@ -276,10 +288,12 @@
                 <p>$ 85</p>
               </a>
             </li>
-            <li class="cataglog__product-item">
+            <li class="catalog__product-item">
               <a class="product-card product-card--catalog" href="#">
                 <picture>
-                  <!-- <source srcset="img/content/bike-type1.webp 1x, img/content/bike-type1@2x.webp 2x" type="image/webp"> -->
+                  <source
+                    srcset="img/content/purple-gemstone-necklace.webp 1x, img/content/purple-gemstone-necklace@2x.webp 2x"
+                    type="image/webp">
                   <!-- 1x: 270px 284px, 2x: 540px 568px -->
                   <img src="img/content/purple-gemstone-necklace.jpg"
                     srcset="img/content/purple-gemstone-necklace@2x.jpg 2x" alt="purple Necklace" width="270"
@@ -289,10 +303,11 @@
                 <p>$ 145</p>
               </a>
             </li>
-            <li class="cataglog__product-item">
+            <li class="catalog__product-item">
               <a class="product-card product-card--catalog" href="#">
                 <picture>
-                  <!-- <source srcset="img/content/bike-type1.webp 1x, img/content/bike-type1@2x.webp 2x" type="image/webp"> -->
+                  <source srcset="img/content/elephant-earrings.webp 1x, img/content/elephant-earrings@2x.webp 2x"
+                    type="image/webp">
                   <!-- 1x: 270px 284px, 2x: 540px 568px -->
                   <img src="img/content/elephant-earrings.jpg" srcset="img/content/elephant-earrings@2x.jpg 2x"
                     alt="elephant earrings" width="270" height="284">
@@ -301,10 +316,12 @@
                 <p>$ 95</p>
               </a>
             </li>
-            <li class="cataglog__product-item">
+            <li class="catalog__product-item">
               <a class="product-card product-card--catalog" href="#">
                 <picture>
-                  <!-- <source srcset="img/content/bike-type1.webp 1x, img/content/bike-type1@2x.webp 2x" type="image/webp"> -->
+                  <source
+                    srcset="img/content/threader-necklace-closeup.webp 1x, img/content/threader-necklace-closeup@2x.webp 2x"
+                    type="image/webp">
                   <!-- 1x: 270px 284px, 2x: 540px 568px -->
                   <img src="img/content/threader-necklace-closeup.jpg"
                     srcset="img/content/threader-necklace-closeup@2x.jpg 2x" alt="Threader necklace" width="270"
@@ -314,10 +331,12 @@
                 <p>$ 115</p>
               </a>
             </li>
-            <li class="cataglog__product-item">
+            <li class="catalog__product-item">
               <a class="product-card product-card--catalog" href="#">
                 <picture>
-                  <!-- <source srcset="img/content/bike-type1.webp 1x, img/content/bike-type1@2x.webp 2x" type="image/webp"> -->
+                  <source
+                    srcset="img/content/origami-crane-necklace.webp 1x, img/content/origami-crane-necklace@2x.webp 2x"
+                    type="image/webp">
                   <!-- 1x: 270px 284px, 2x: 540px 568px -->
                   <img src="img/content/origami-crane-necklace.jpg"
                     srcset="img/content/origami-crane-necklace@2x.jpg 2x" alt="origami crane necklace" width="270"
@@ -327,10 +346,11 @@
                 <p>$ 105</p>
               </a>
             </li>
-            <li class="cataglog__product-item">
+            <li class="catalog__product-item">
               <a class="product-card product-card--catalog" href="#">
                 <picture>
-                  <!-- <source srcset="img/content/bike-type1.webp 1x, img/content/bike-type1@2x.webp 2x" type="image/webp"> -->
+                  <source srcset="img/content/marble-earrings.webp 1x, img/content/marble-earrings@2x.webp 2x"
+                    type="image/webp">
                   <!-- 1x: 270px 284px, 2x: 540px 568px -->
                   <img src="img/content/marble-earrings.jpg" srcset="img/content/marble-earrings@2x.jpg 2x"
                     alt="marble earrings" width="270" height="284">
