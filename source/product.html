@@ -24,11 +24,13 @@
           <span></span>
         </button>
         <div class="header__search">
-          <label for="search" class="hidden">Search</label>
-          <input tabindex="0" id="search" type="search" placeholder="Type here to search">
-          <svg width="14" height="14" viewBox="0 0 17 17" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-            <use xlink:href="img/icon/sprite.svg#loupe"></use>
-          </svg>
+          <form action="https://echo.htmlacademy.ru" method="GET">
+            <label for="search" class="hidden">Search</label>
+            <input tabindex="0" id="search" type="search" placeholder="Type here to search">
+            <svg width="14" height="14" viewBox="0 0 17 17" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="img/icon/sprite.svg#loupe"></use>
+            </svg>
+          </form>
         </div>
         <a class="logo" href="index.html">
           <svg width="66" height="66" viewBox="0 0 66 66" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
@@ -38,25 +40,29 @@
         </a>
         <div class="header__cart-area">
           <a class="header__cart-area-link login" href="login.html">Login</a>
-          <a class="header__cart-area-link" href="cart.html">Cart <span>0</span></a>
           <a class="header__cart-area-link header__cart-area-link--cart" href="cart.html">
+            <p>Cart <span>0</span></p>
             <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M14 5C14 6.06087 13.5786 7.07828 12.8284 7.82843C12.0783 8.57857 11.0609 9 10 9C8.93913 9 7.92172 8.57857 7.17157 7.82843C6.42143 7.07828 6 6.06087 6 5M1 1H19V17H1V1Z"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-            </svg></a>
+            </svg>
+          </a>
         </div>
       </div>
     </div>
     <div class="menu menu--open">
       <div class="container">
-        <p class="menu__search">
-          <label for="search-menu" class="hidden">Search</label>
-          <input class="search" id="search-menu" type="search" placeholder="Type here to search">
-          <svg width="16" height="16" viewBox="0 0 17 17" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-            <use xlink:href="img/icon/sprite.svg#loupe"></use>
-          </svg>
-        </p>
+        <div class="menu__search">
+          <form action="https://echo.htmlacademy.ru" method="GET">
+            <label for="search-menu" class="hidden">Search</label>
+            <input class="search" id="search-menu" type="search" placeholder="Type here to search">
+            <svg width="16" height="16" viewBox="0 0 17 17" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="img/icon/sprite.svg#loupe"></use>
+            </svg>
+          </form>
+        </div>
+
         <nav class="navigation navigation--open">
           <ul class="navigation__list">
             <li class="navigation__item">
@@ -76,7 +82,7 @@
             </li>
           </ul>
         </nav>
-        <ul class="extra-navigation">
+        <ul class="extra-navigation extra-navigation--open">
           <li class="extra-navigation__item">
             <a class="extra-navigation__link" href="#">About CH</a>
           </li>
@@ -265,7 +271,7 @@
     <section class="products products--card">
       <div class="container">
         <h2>You May Also Like</h2>
-        <a href="catalog.html" class="link link--products">Shop Now</a>
+        <a href="catalog.html" class="link link--products link--products-card">Shop Now</a>
         <!-- Slider main container -->
         <div class="swiper-container slider2">
           <!-- If we need navigation buttons -->

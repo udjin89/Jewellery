@@ -3,7 +3,7 @@ const accordion = document.querySelector('.accordion');
 
 if (accordion) {
   const accordionItems = accordion.querySelectorAll('.accordion__item');
-  const panelItem = accordion.querySelectorAll('h3');
+  const panelItem = accordion.querySelectorAll('button');
   const active = accordion.getElementsByClassName('panel-active');
   const activeItem = accordion.getElementsByClassName('accordion__item--active');
 

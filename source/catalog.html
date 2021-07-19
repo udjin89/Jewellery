@@ -26,11 +26,13 @@
           <span></span>
         </button>
         <div class="header__search">
-          <label for="search" class="hidden">Search</label>
-          <input tabindex="0" id="search" type="search" placeholder="Type here to search">
-          <svg width="14" height="14" viewBox="0 0 17 17" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-            <use xlink:href="img/icon/sprite.svg#loupe"></use>
-          </svg>
+          <form action="https://echo.htmlacademy.ru" method="GET">
+            <label for="search" class="hidden">Search</label>
+            <input tabindex="0" id="search" type="search" placeholder="Type here to search">
+            <svg width="14" height="14" viewBox="0 0 17 17" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="img/icon/sprite.svg#loupe"></use>
+            </svg>
+          </form>
         </div>
         <a class="logo" href="index.html">
           <svg width="66" height="66" viewBox="0 0 66 66" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
@@ -40,25 +42,28 @@
         </a>
         <div class="header__cart-area">
           <a class="header__cart-area-link login" href="login.html">Login</a>
-          <a class="header__cart-area-link" href="cart.html">Cart <span>0</span></a>
           <a class="header__cart-area-link header__cart-area-link--cart" href="cart.html">
+            <p>Cart <span>0</span></p>
             <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M14 5C14 6.06087 13.5786 7.07828 12.8284 7.82843C12.0783 8.57857 11.0609 9 10 9C8.93913 9 7.92172 8.57857 7.17157 7.82843C6.42143 7.07828 6 6.06087 6 5M1 1H19V17H1V1Z"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-            </svg></a>
+            </svg>
+          </a>
         </div>
       </div>
     </div>
     <div class="menu menu--open">
       <div class="container">
-        <p class="menu__search">
-          <label for="search-menu" class="hidden">Search</label>
-          <input class="search" id="search-menu" type="search" placeholder="Type here to search">
-          <svg width="16" height="16" viewBox="0 0 17 17" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-            <use xlink:href="img/icon/sprite.svg#loupe"></use>
-          </svg>
-        </p>
+        <div class="menu__search">
+          <form action="https://echo.htmlacademy.ru" method="GET">
+            <label for="search-menu" class="hidden">Search</label>
+            <input class="search" id="search-menu" type="search" placeholder="Type here to search">
+            <svg width="16" height="16" viewBox="0 0 17 17" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="img/icon/sprite.svg#loupe"></use>
+            </svg>
+          </form>
+        </div>
         <nav class="navigation navigation--open">
           <ul class="navigation__list">
             <li class="navigation__item">
@@ -78,7 +83,7 @@
             </li>
           </ul>
         </nav>
-        <ul class="extra-navigation">
+        <ul class="extra-navigation extra-navigation--open">
           <li class="extra-navigation__item">
             <a class="extra-navigation__link" href="#">About CH</a>
           </li>
@@ -107,76 +112,76 @@
       <div class="container">
         <h2 class="hidden">catalog</h2>
         <div class="catalog__grid">
-          <button class="button button--filter">Filter</button>
+          <button class="button button--filter" type="button">Filter</button>
           <form action="https://echo.htmlacademy.ru" method="get">
-            <button class="button button--close-filter" type="button"></button>
+
             <h3 class="hidden">Filter</h3>
             <ul class="catalog__option-list">
-              <li class="catalog__item catalog__item--active">
-                <h3 tabindex="0">Product</h3>
-                <ul class="input-options ">
-                  <li class="input-options__item">
+              <li class="catalog__item catalog__item--active ">
+                <button type="button" class="catalog__button">Product</button>
+                <ul class="catalog__input-options ">
+                  <li>
                     <input class="hidden" type="checkbox" name="Necklaces" id="Necklaces">
                     <label for="Necklaces" class="catalog__checkbox">Necklaces</label>
                   </li>
-                  <li class="input-options__item">
+                  <li>
                     <input class="hidden" type="checkbox" name="Chokers" id="Chokers">
                     <label for="Chokers" class="catalog__checkbox">Chokers</label>
                   </li>
-                  <li class="input-options__item">
+                  <li>
                     <input class="filter-input-checkbox hidden" type="checkbox" name="Rings" id="Rings">
                     <label for="Rings" class="catalog__checkbox">Rings</label>
                   </li>
-                  <li class="input-options__item">
+                  <li>
                     <input class="filter-input-checkbox hidden" type="checkbox" name="Earrings" id="Earrings">
                     <label for="Earrings" class="catalog__checkbox">Earrings</label>
                   </li>
                 </ul>
               </li>
               <li class="catalog__item ">
-                <h3 tabindex="0">Material</h3>
-                <ul class="input-options">
-                  <li class="input-options__item">
+                <button type="button" class="catalog__button">Material</button>
+                <ul class="catalog__input-options">
+                  <li>
                     <input class="hidden" type="checkbox" name="Gold" id="Gold">
                     <label for="Gold" class="catalog__checkbox">Gold</label>
                   </li>
-                  <li class="input-options__item">
+                  <li>
                     <input class="hidden" type="checkbox" name="Silver" id="Silver">
                     <label for="Silver" class="catalog__checkbox">Silver</label>
                   </li>
                 </ul>
               </li>
               <li class="catalog__item ">
-                <h3 tabindex="0">Collection</h3>
-                <ul class="input-options">
-                  <li class="input-options__item">
+                <button type="button" class="catalog__button">Collection</button>
+                <ul class="catalog__input-options">
+                  <li>
                     <input class="hidden" type="checkbox" name="Pink-flamingo" id="Pink-flamingo">
                     <label for="Pink-flamingo" class="catalog__checkbox">Pink flamingo</label>
                   </li>
-                  <li class="input-options__item">
+                  <li>
                     <input class="hidden" type="checkbox" name="Dreams" id="Dreams">
                     <label for="Dreams" class="catalog__checkbox">Dreams</label>
                   </li>
                 </ul>
               </li>
-              <li class="catalog__item catalog__item--active">
-                <h3 tabindex="0">Price</h3>
+              <li class="catalog__item catalog__item--active ">
+                <button type="button" class="catalog__button">Price</button>
 
-                <div class="range-filter">
-                  <div class="range-filter__control">
-                    <div class="scale">
-                      <div class="bar" style="width: 50%; margin-left: 25%;"></div>
+                <div class="catalog__range-filter">
+                  <div class="catalog__range-control">
+                    <div class="catalog__range-scale">
+                      <div class="catalog__range-bar" style="width: 50%; margin-left: 25%;"></div>
                     </div>
 
-                    <button type="button" class="toggle-control toggle-control--min" aria-label="left-toggle"
-                      tabindex="0" style="left: 22%;"></button>
-                    <label class="range-filter__price range-filter__price--min" style="left: 19%;">
+                    <button type="button" class="catalog__range-toggle-control range-filter__toggle-control--min"
+                      aria-label="left-toggle" tabindex="0" style="left: 22%;"></button>
+                    <label class="catalog__range-price catalog__range-price--min" style="left: 19%;">
                       $<input type="number" name="min-price" value="55">
                     </label>
 
-                    <button type="button" class="toggle-control toggle-control--max" aria-label="right-toggle"
-                      tabindex="0" style="left: 74%;"></button>
-                    <label class="range-filter__price range-filter__price--max" style="left: 44%;">
+                    <button type="button" class="catalog__range-toggle-control catalog__range-toggle-control--max"
+                      aria-label="right-toggle" tabindex="0" style="left: 74%;"></button>
+                    <label class="catalog__range-price catalog__range-price--max" style="left: 44%;">
                       $<input type="number" name="max-price" value="155">
                     </label>
                   </div>
@@ -187,7 +192,7 @@
               <button class="button button--filter-apply" type="submit">Apply</button>
               <button class="button button--filter-reset" type="reset">Clear All</button>
             </div>
-
+            <button class="button button--close-filter" type="button" aria-label="Close filter"></button>
           </form>
           <ul class="catalog__product-list">
             <li class="catalog__product-item">
@@ -366,7 +371,7 @@
 
           </ul>
           <div class="catalog__pagination">
-            <button class="button button--catalog button--catalog-prev">Previous</button>
+            <a class="button button--catalog button--catalog-prev" href="#">Previous</a>
             <ul class="catalog__pagination-list">
               <li>
                 <a class="catalog__pagination-link catalog__pagination-link--active">1</a>
@@ -384,7 +389,7 @@
                 <a class="catalog__pagination-link" href="#">5</a>
               </li>
             </ul>
-            <button class="button button--catalog button--catalog-next">Next</button>
+            <a class="button button--catalog button--catalog-next" href="#">Next</a>
           </div>
         </div>
 
@@ -490,7 +495,7 @@
 
       </div>
     </form>
-    <button class="button button--close" aria-label="Закрыть"></button>
+    <button class="button button--close" aria-label="Close"></button>
   </div>
   <script src="js/vendor.js"></script>
   <script src="js/main.js"></script>

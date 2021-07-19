@@ -24,3 +24,41 @@
     color: $black;
   }
 }
+
+.extra-navigation--open {
+  @include tablet {
+    display: block;
+    z-index: 1000;
+  }
+}
+
+// .extra-navigation--open .navigation__list {
+//   @include tablet {
+//     display: block;
+//   }
+// }
+
+// .extra-navigation--open .navigation__item {
+//   margin-bottom: 21px;
+
+//   &:last-child {
+//     margin-bottom: 35px;
+//   }
+
+//   @include mobile {
+//     &:last-child {
+//       margin-bottom: 25px;
+//     }
+//   }
+// }
+// .extra-navigation--open .navigation__link {
+//   @include tablet {
+//     font-size: 24px;
+//     line-height: 36px;
+//     color: $white;
+//   }
+
+//   &:active {
+//     color: $black;
+//   }
+// }

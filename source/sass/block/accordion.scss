@@ -1,5 +1,6 @@
 .accordion__item {
   border-bottom: 1px solid $brown;
+  position: relative;
 
   &:last-of-type {
     border: none;
@@ -26,14 +27,19 @@
   }
 }
 
-.accordion__item h3 {
+.accordion__item button {
+  display: block;
   margin: 0;
   padding: 43px 0 43px 41px;
+  font-family: "Poppins", "Arial", sans-serif;
   font-weight: 500;
   font-size: 18px;
   line-height: 130%;
-  position: relative;
   cursor: pointer;
+  background-color: $white;
+  border: none;
+  width: 100%;
+  text-align: left;
 
   &::before,
   &::after {
@@ -73,16 +79,16 @@
   }
 }
 
-.accordion__item--active h3 {
+.accordion__item--active button {
   padding-bottom: 20px;
 
   &::before {
-    top: 62%;
+    top: 31%;
     transform: translate(-11px, -50%) rotate(45deg);
   }
 
   &::after {
-    top: 62%;
+    top: 31%;
     transform: translate(0, -50%) rotate(-45deg);
   }
 
@@ -101,7 +107,7 @@
   }
 }
 
-.accordion__item--special h3 {
+.accordion__item--special button {
   @include mobile {
     padding-right: 30px;
   }

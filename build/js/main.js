@@ -3,7 +3,7 @@ const accordion = document.querySelector('.accordion');
 
 if (accordion) {
   const accordionItems = accordion.querySelectorAll('.accordion__item');
-  const panelItem = accordion.querySelectorAll('h3');
+  const panelItem = accordion.querySelectorAll('button');
   const active = accordion.getElementsByClassName('panel-active');
   const activeItem = accordion.getElementsByClassName('accordion__item--active');
 
@@ -30,8 +30,15 @@ if (accordion) {
 
 const options = document.querySelector('.catalog__option-list');
 if (options) {
-  const optionsList = options.querySelectorAll('h3');
+  const catalogItems = options.querySelectorAll('.catalog__item');
+  const optionsList = options.querySelectorAll('.catalog__button');
 
+  optionsList.forEach((elem, index) => {
+
+    elem.addEventListener('click', function (evt) {
+      this.parentNode.classList.toggle('catalog__item--active');
+    });
+  });
   optionsList.forEach((elem, index) => {
 
     elem.addEventListener('keydown', function (evt) {
@@ -40,8 +47,8 @@ if (options) {
       }
     });
   });
-
 }
+
 
 const catalog = document.querySelector('.catalog');
 if (catalog) {
@@ -103,7 +110,7 @@ const header = document.querySelector('.header');
 const menu = document.querySelector('.menu');
 const menuNav = document.querySelector('.navigation');
 const body = document.querySelector('.page__body');
-
+const extra = menu.querySelector('.extra-navigation');
 // No-js menu
 header.classList.remove('header--no-js');
 header.classList.remove('header--open');
@@ -113,6 +120,7 @@ if (menu) {
 }
 if (menuNav) {
   menuNav.classList.remove('navigation--open');
+  extra.classList.remove('extra-navigation--open');
   menuNav.classList.remove('navigation--no-js');
 }
 if (toggle) {
@@ -129,6 +137,7 @@ if (toggle) {
 function openMenu() {
   toggle.classList.add('is-active');
   menuNav.classList.add('navigation--open');
+  extra.classList.add('extra-navigation--open');
   menu.classList.add('menu--open');
   header.classList.add('header--open');
   body.classList.add('overflow');
@@ -136,6 +145,7 @@ function openMenu() {
 function closeMenu() {
   toggle.classList.remove('is-active');
   menuNav.classList.remove('navigation--open');
+  extra.classList.remove('extra-navigation--open');
   menu.classList.remove('menu--open');
   header.classList.remove('header--open');
   body.classList.remove('overflow');
