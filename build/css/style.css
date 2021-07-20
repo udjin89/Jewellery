@@ -1165,7 +1165,7 @@ img {
   display: block;
   margin: 0;
   padding: 43px 0 43px 41px;
-  font-family: "Poppins";
+  font-family: "Poppins", "Arial", sans-serif;
   font-weight: 500;
   font-size: 18px;
   line-height: 130%;
@@ -1885,7 +1885,7 @@ img {
   padding: 24px 25px 21px 25px;
   position: relative;
   width: 100%;
-  font-family: "Poppins";
+  font-family: "Poppins", "Arial", sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 130%;
@@ -2029,76 +2029,6 @@ input[type="number"]:focus {
   -moz-appearance: number-input; }
 
 /* stylelint-enable */
-.catalog__range-filter {
-  padding: 0 25px;
-  font-weight: 500;
-  font-size: 14px;
-  margin-bottom: 4px; }
-  @media screen and (max-width: 1023.33px) {
-    .catalog__range-filter {
-      margin-top: 10px;
-      padding-left: 50px;
-      padding-right: 88px; } }
-
-.catalog__range-filter-control {
-  position: relative;
-  padding-top: 3px;
-  height: 50px;
-  border-radius: 2px; }
-
-.catalog__range-control {
-  position: relative; }
-
-.catalog__range-control .catalog__range-scale {
-  position: relative;
-  margin-bottom: 9px;
-  height: 1px;
-  background-color: rgba(168, 123, 98, 0.2); }
-  @media screen and (max-width: 1023.33px) {
-    .catalog__range-control .catalog__range-scale {
-      height: 1px; } }
-
-.catalog__range-control .catalog__range-bar {
-  height: 1px;
-  background-color: #a87b62; }
-  @media screen and (max-width: 1023.33px) {
-    .catalog__range-control .catalog__range-bar {
-      height: 1px; } }
-
-.catalog__range-control .catalog__range-toggle-control {
-  position: absolute;
-  z-index: 10;
-  top: -4px;
-  width: 15px;
-  height: 15px;
-  padding: 0;
-  background-color: #a87b62;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer; }
-  @media screen and (max-width: 1023.33px) {
-    .catalog__range-control .catalog__range-toggle-control {
-      width: 13px;
-      height: 13px; } }
-  .catalog__range-control .catalog__range-toggle-control:hover {
-    width: 19px;
-    height: 19px;
-    top: -6px; }
-  .catalog__range-control .catalog__range-toggle-control:active {
-    border: 1px solid #1d1613;
-    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.24); }
-
-.catalog__range-price {
-  position: relative; }
-
-.catalog__range-price input {
-  width: 40px;
-  border: none;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 130%;
-  background-color: transparent; }
-
 .catalog__range-filter {
   padding: 0 25px;
   font-weight: 500;

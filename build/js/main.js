@@ -49,7 +49,6 @@ if (options) {
   });
 }
 
-
 const catalog = document.querySelector('.catalog');
 if (catalog) {
   const optionList = catalog.querySelector('.catalog__option-list');
