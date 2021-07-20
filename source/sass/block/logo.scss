@@ -1,9 +1,15 @@
 .logo {
   margin-left: -20px;
   color: $brown;
+  //
+  position: absolute;
+  left: 50%;
+  transform: translateX(-20%);
+  //
 
   @include tablet {
     margin-left: 0;
+    transform: translateX(-50%);
   }
 
   &--login {

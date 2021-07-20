@@ -3,12 +3,13 @@ const header = document.querySelector('.header');
 const menu = document.querySelector('.menu');
 const menuNav = document.querySelector('.navigation');
 const body = document.querySelector('.page__body');
-const extra = menu.querySelector('.extra-navigation');
+const extra = document.querySelector('.extra-navigation');
 // No-js menu
 header.classList.remove('header--no-js');
 header.classList.remove('header--open');
 
 if (menu) {
+
   menu.classList.remove('menu--open');
 }
 if (menuNav) {

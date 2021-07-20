@@ -38,7 +38,7 @@ img {
 }
 
 .page {
-  overflow-y: scroll;
+  // overflow-y: scroll;
 }
 
 @media screen and (min-width: 960px) {
@@ -75,6 +75,7 @@ img {
 }
 
 .overflow {
+  // position: fixed;
   overflow: hidden;
 }
 

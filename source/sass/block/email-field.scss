@@ -16,6 +16,10 @@
   border: none;
   background-color: transparent;
   color: $white;
+
+  &:hover {
+    background-color: rgba($white, 0.1);
+  }
 }
 
 .email-field input::placeholder {
