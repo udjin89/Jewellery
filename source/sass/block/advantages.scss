@@ -28,7 +28,7 @@
 
   @include mobile {
     text-align: center;
-    width: 60px;
+    // width: 60px;
 
     &:not(:last-of-type) {
       position: relative;
@@ -44,5 +44,9 @@
         background-color: $light-grey;
       }
     }
+  }
+
+  @media screen and (max-width: 397.8px) {
+    width: 60px;
   }
 }

@@ -4,32 +4,32 @@
   padding-top: 195px;
   height: 463px;
 
-  background-image: url("../img/background/main.jpg");
+  background-image: url("../img/background/main.webp");
   background-repeat: no-repeat;
   background-size: cover;
 
   @include retina {
-    background-image: url("../img/background/main@2x.jpg");
+    background-image: url("../img/background/main@2x.webp");
   }
 
   @include tablet {
     // margin-top: 25px;
     margin-top: 85px;
-    background-image: url("../img/background/main-tablet.jpg");
+    background-image: url("../img/background/main-tablet.webp");
     background-position-x: center;
 
     @include retina {
-      background-image: url("../img/background/main-tablet@2x.jpg");
+      background-image: url("../img/background/main-tablet@2x.webp");
     }
   }
 
   @include mobile {
     // margin-top: 15px;
     margin-top: 60px;
-    background-image: url("../img/background/main-mobile.jpg");
+    background-image: url("../img/background/main-mobile.webp");
 
     @include retina {
-      background-image: url("../img/background/main-mobile@2x.jpg");
+      background-image: url("../img/background/main-mobile@2x.webp");
     }
   }
 
@@ -37,31 +37,31 @@
     height: 261px;
     padding-top: 98px;
     letter-spacing: 0.5px;
-    background-image: url("../img/background/catalog.jpg");
+    background-image: url("../img/background/catalog.webp");
     background-repeat: no-repeat;
 
     background-size: cover;
 
     @include retina {
-      background-image: url("../img/background/catalog@2x.jpg");
+      background-image: url("../img/background/catalog@2x.webp");
     }
 
     @include tablet {
 
-      background-image: url("../img/background/catalog-tablet.jpg");
+      background-image: url("../img/background/catalog-tablet.webp");
       background-position-x: center;
 
       @include retina {
-        background-image: url("../img/background/catalog-tablet@2x.jpg");
+        background-image: url("../img/background/catalog-tablet@2x.webp");
       }
     }
 
     @include mobile {
       padding-top: 87px;
-      background-image: url("../img/background/catalog-mobile.jpg");
+      background-image: url("../img/background/catalog-mobile.webp");
 
       @include retina {
-        background-image: url("../img/background/catalog-mobile@2x.jpg");
+        background-image: url("../img/background/catalog-mobile@2x.webp");
       }
     }
   }

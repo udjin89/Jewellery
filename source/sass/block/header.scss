@@ -112,7 +112,10 @@
 .header__search {
   position: relative;
   margin: 0;
+  margin-top: 10px;
   padding: 0;
+  border: none;
+  outline: none;
 
   @include tablet {
     display: none;
@@ -122,13 +125,16 @@
 .header__search svg {
   position: absolute;
   left: 0;
-  top: 15px;
+  top: 5px;
 }
 
 .header__search input {
+  display: block;
   padding-left: 30px;
   border: none;
   border-radius: 20px;
+  height: 30px;
+  line-height: 30px;
 
   &:hover {
     background-color: $light-beige;
@@ -145,4 +151,6 @@
   font-size: 14px;
   line-height: 21px;
   color: $grey;
+  // display: block;
+  overflow: visible;
 }

@@ -11,6 +11,7 @@
 
   &--open {
     margin-left: 0;
+    padding-left: 0;
   }
 }
 
@@ -48,6 +49,7 @@
 
 .navigation--open .navigation__item {
   margin-bottom: 21px;
+  overflow: hidden;
 
   &:last-child {
     margin-bottom: 35px;

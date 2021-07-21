@@ -72,6 +72,7 @@
     margin-top: 47px;
     margin-left: auto;
     margin-right: auto;
+    max-width: 100%;
     min-width: 270px;
   }
 }
@@ -117,12 +118,13 @@
   margin-top: 15px;
   padding: 0;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 50% 50%;
 }
 
 .article-card__description dd,
 .article-card__description dt {
   margin: 0;
+  overflow: hidden;
   padding: 13px 0 10px 0;
   border-bottom: 1px solid #f6f5f4;
 }

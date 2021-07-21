@@ -65,12 +65,13 @@
   padding: 0;
   list-style: none;
 
+
   &--extra-nav {
-    margin-left: 72px;
+    // margin-left: 72px;
   }
 
   &--social {
-    margin-left: 105px;
+    margin-left: auto;
   }
 
   @media screen and (max-width: 1200px) {
@@ -104,6 +105,12 @@
 .footer__list-item {
   font-size: 16px;
   margin-bottom: 13px;
+  max-width: 170px;
+  overflow: hidden;
+
+  @include mobile {
+    max-width: 100%;
+  }
 }
 
 .footer__link {
