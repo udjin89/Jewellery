@@ -216,7 +216,7 @@ const sliderImages = new Swiper('.slider__images .swiper-container', { // ище
   direction: 'vertical', // вертикальная прокрутка
   slidesPerView: 1, // показывать по 1 изображению
   spaceBetween: 32, // расстояние между слайдами
-  loop: true,
+  // loop: true,
   //mousewheel: true, // можно прокручивать изображения колёсиком мыши
   // initialSlide: 1,
   navigation: { // задаем кнопки навигации
@@ -276,10 +276,10 @@ const swiper = new Swiper('.products--main .swiper-container', {
   speed: 400,
   observer: true,
   observeParents: true,
-  initialSlide: 8,
+  initialSlide: 1,
   // spaceBetween: 30,
   updateOnWindowResize: true,
-  loop: true,
+  // loop: true,
 
   // Navigation arrows
   navigation: {
@@ -353,7 +353,7 @@ const swiper2 = new Swiper('.products--card .swiper-container', {
   observer: true,
   observeParents: true,
   // spaceBetween: 30,
-  loop: true,
+  // loop: true,
 
   // Navigation arrows
   navigation: {

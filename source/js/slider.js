@@ -2,10 +2,10 @@ const swiper = new Swiper('.products--main .swiper-container', {
   speed: 400,
   observer: true,
   observeParents: true,
-  initialSlide: 8,
+  initialSlide: 1,
   // spaceBetween: 30,
   updateOnWindowResize: true,
-  loop: true,
+  // loop: true,
 
   // Navigation arrows
   navigation: {
@@ -79,7 +79,7 @@ const swiper2 = new Swiper('.products--card .swiper-container', {
   observer: true,
   observeParents: true,
   // spaceBetween: 30,
-  loop: true,
+  // loop: true,
 
   // Navigation arrows
   navigation: {

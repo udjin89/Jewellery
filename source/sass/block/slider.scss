@@ -55,8 +55,9 @@
 .products .swiper-pagination-bullet-active {
   color: $black;
 }
+
 .slider3 .slider-prev,
-.slider3 .slider-next{
+.slider3 .slider-next {
   position: absolute;
   z-index: 1000;
   top: 50%;
@@ -70,6 +71,7 @@
   width: 50px;
   height: 50px;
   opacity: 0.5;
+
   &:hover {
     opacity: 1;
   }
@@ -77,14 +79,17 @@
   &:active {
     opacity: 0.8;
   }
-  @include tablet{
+
+  @include tablet {
     display: none;
   }
 }
-.slider3 .slider-next{
+
+.slider3 .slider-next {
   right: 0;
   transform: rotate(180deg) translateY(50%);
 }
+
 .products .swiper-button-prev,
 .products .swiper-button-next {
   position: relative;
@@ -123,6 +128,12 @@
   height: 50px;
 }
 
-.swiper-slide:focus-within{
-  outline: 2px solid red;
+.products .swiper-button-disabled,
+.products--card .swiper-button-disabled {
+  opacity: 0;
+
+  &:hover,
+  &:active {
+    opacity: 0;
+  }
 }

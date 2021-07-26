@@ -68,7 +68,7 @@
       background-size: cover;
     }
 
-    @include mobile500{
+    @include mobile500 {
       background-size: contain;
     }
   }
@@ -86,8 +86,6 @@
       background-position-x: right;
     }
 
-
-
     @include mobile {
       // background-size: 100% 256px;
       // background-size: contain;
@@ -95,7 +93,7 @@
       background-size: cover;
     }
 
-    @include mobile500{
+    @include mobile500 {
       // background-size: cover;
       background-size: contain;
     }
@@ -129,7 +127,8 @@
         background-image: url("../img/content/alve-odonnell-blog-trends-mobile@2x.webp");
       }
     }
-    @include mobile500{
+
+    @include mobile500 {
       // background-size: cover;
       background-size: contain;
     }
@@ -172,6 +171,7 @@
     // max-height: 90px;
     max-width: inherit;
   }
+
   // overflow: hidden;
 
   &:last-of-type {

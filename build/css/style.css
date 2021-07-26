@@ -1810,8 +1810,13 @@ img {
   width: 50px;
   height: 50px; }
 
-.swiper-slide:focus-within {
-  outline: 2px solid red; }
+.products .swiper-button-disabled,
+.products--card .swiper-button-disabled {
+  opacity: 0; }
+  .products .swiper-button-disabled:hover, .products .swiper-button-disabled:active,
+  .products--card .swiper-button-disabled:hover,
+  .products--card .swiper-button-disabled:active {
+    opacity: 0; }
 
 .products {
   position: relative;
@@ -2569,3 +2574,8 @@ input[type="number"]:focus {
 @media (max-width: 767.68px) {
   .slider__col {
     display: none; } }
+
+.slider__images .swiper-button-disabled {
+  opacity: 0; }
+  .slider__images .swiper-button-disabled:hover, .slider__images .swiper-button-disabled:active {
+    opacity: 0; }

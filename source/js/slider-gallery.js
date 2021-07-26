@@ -21,7 +21,7 @@ const sliderImages = new Swiper('.slider__images .swiper-container', { // ище
   direction: 'vertical', // вертикальная прокрутка
   slidesPerView: 1, // показывать по 1 изображению
   spaceBetween: 32, // расстояние между слайдами
-  loop: true,
+  // loop: true,
   //mousewheel: true, // можно прокручивать изображения колёсиком мыши
   // initialSlide: 1,
   navigation: { // задаем кнопки навигации

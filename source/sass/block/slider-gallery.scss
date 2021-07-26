@@ -152,3 +152,12 @@
     }
   }
 }
+
+.slider__images .swiper-button-disabled {
+  opacity: 0;
+
+  &:hover,
+  &:active {
+    opacity: 0;
+  }
+}
