@@ -470,9 +470,11 @@ img {
   margin-top: 11px;
   padding-left: 55px;
   width: 590px; }
-  .navigation--open {
-    margin-left: 0;
-    padding-left: 0; }
+  @media screen and (max-width: 1023.33px) {
+    .navigation--open {
+      margin-left: 0;
+      padding-left: 0;
+      width: 100%; } }
 
 .navigation__list {
   margin: 0;
@@ -720,6 +722,9 @@ img {
     background-color: #ffffff;
     outline: 5px solid #a87b62;
     outline-offset: -4px; }
+  @media screen and (max-width: 767.66px) {
+    .button--submit {
+      margin-top: 40px; } }
 
 .button--filter {
   display: none; }
@@ -1409,12 +1414,21 @@ img {
   @media screen and (max-width: 767.66px) {
     .modal--login,
     .modal--login-static {
-      min-width: 270px;
-      width: 90%; } }
+      width: 270px;
+      margin: 0 auto 50px auto;
+      background-size: 100% 84px;
+      padding-top: 120px;
+      padding-left: 15px;
+      padding-right: 15px; } }
 
 .modal--login h2,
 .modal--login-static h2 {
   margin-bottom: 25px; }
+  @media screen and (max-width: 767.66px) {
+    .modal--login h2,
+    .modal--login-static h2 {
+      margin-bottom: 15px;
+      font-size: 24px; } }
 
 .modal__button-group {
   margin-top: 40px;
@@ -1540,50 +1554,59 @@ img {
       height: 512px;
       padding-top: 256px; } }
   .blog__article--blog-care {
-    background-image: url("../img/content/jess-harper-sunday-blog-care-desktop.jpg"); }
+    background-image: url("../img/content/jess-harper-sunday-blog-care-desktop.webp"); }
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
       .blog__article--blog-care {
-        background-image: url("../img/content/jess-harper-sunday-blog-care-desktop@2x.jpg"); } }
+        background-image: url("../img/content/jess-harper-sunday-blog-care-desktop@2x.webp"); } }
     @media screen and (max-width: 1023.33px) {
       .blog__article--blog-care {
         background-size: 50% 300px; } }
     @media screen and (max-width: 767.66px) {
       .blog__article--blog-care {
-        background-size: 100% 256px; } }
+        background-size: cover; } }
+    @media screen and (max-width: 500.1px) {
+      .blog__article--blog-care {
+        background-size: contain; } }
   .blog__article--blog-power {
-    background-image: url("../img/content/alex-holyoake-unsplash-blog-power-desktop.jpg");
+    background-image: url("../img/content/alex-holyoake-unsplash-blog-power-desktop.webp");
     background-position-x: right; }
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
       .blog__article--blog-power {
-        background-image: url("../img/content/alex-holyoake-unsplash-blog-power-desktop@2x.jpg"); } }
+        background-image: url("../img/content/alex-holyoake-unsplash-blog-power-desktop@2x.webp"); } }
     @media screen and (max-width: 1023.33px) {
       .blog__article--blog-power {
         background-size: 50% 300px;
         background-position-x: right; } }
     @media screen and (max-width: 767.66px) {
       .blog__article--blog-power {
-        background-size: 100% 256px; } }
+        background-size: cover; } }
+    @media screen and (max-width: 500.1px) {
+      .blog__article--blog-power {
+        background-size: contain; } }
   .blog__article--blog-trends {
-    background-image: url("../img/content/alve-odonnell-unsplash-blog-trends-desktop.jpg");
+    background-image: url("../img/content/alve-odonnell-unsplash-blog-trends-desktop.webp");
     background-size: cover; }
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
       .blog__article--blog-trends {
-        background-image: url("../img/content/alve-odonnell-unsplash-blog-trends-desktop@2x.jpg"); } }
+        background-image: url("../img/content/alve-odonnell-unsplash-blog-trends-desktop@2x.webp"); } }
     @media screen and (max-width: 1023.33px) {
       .blog__article--blog-trends {
         background-size: 50%;
-        background-image: url("../img/content/alve-odonnell-blog-trends-tablet.jpg"); } }
+        background-image: url("../img/content/alve-odonnell-blog-trends-tablet.webp"); } }
   @media screen and (max-width: 1023.33px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 1023.33px) and (min-resolution: 2dppx) {
     .blog__article--blog-trends {
       background-size: 50%;
-      background-image: url("../img/content/alve-odonnell-blog-trends-tablet.jpg"); } }
+      background-image: url("../img/content/alve-odonnell-blog-trends-tablet.webp"); } }
     @media screen and (max-width: 767.66px) {
       .blog__article--blog-trends {
-        background-size: 100% 256px;
-        background-image: url("../img/content/alve-odonnell-blog-trends-mobile.jpg"); } }
+        background-size: cover;
+        background-image: url("../img/content/alve-odonnell-blog-trends-mobile.webp"); } }
   @media screen and (max-width: 767.66px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767.66px) and (min-resolution: 2dppx) {
     .blog__article--blog-trends {
-      background-image: url("../img/content/alve-odonnell-blog-trends-mobile@2x.jpg"); } }
+      background-image: url("../img/content/alve-odonnell-blog-trends-mobile@2x.webp"); } }
+    @media screen and (max-width: 500.1px) {
+      .blog__article--blog-trends {
+        background-size: contain; } }
 
 .blog__article p {
   margin: 0;
@@ -1599,9 +1622,7 @@ img {
   margin-top: 13px;
   margin-bottom: 30px;
   padding: 0 40px;
-  overflow: hidden;
   max-width: 275px;
-  max-height: 120px;
   font-family: "CormorantGaramond", "Arial", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -1616,8 +1637,16 @@ img {
   @media screen and (max-width: 767.66px) {
     .blog__article h3 {
       padding: 0 60px;
-      max-height: 90px;
       max-width: inherit; } }
+  .blog__article h3:last-of-type {
+    text-overflow: ellipsis;
+    min-width: 285px;
+    overflow: hidden;
+    /* stylelint-disable */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    /* stylelint-enable */ }
 
 .blog__article:nth-child(3n) {
   grid-column-start: 2;
@@ -1631,6 +1660,7 @@ img {
 
 .blog__article-description {
   padding-top: 68px;
+  padding-bottom: 10px;
   width: 50%;
   height: 300px;
   margin-left: auto;
@@ -1717,6 +1747,36 @@ img {
 .products .swiper-pagination-bullet-active {
   color: #1d1613; }
 
+.slider3 .slider-prev,
+.slider3 .slider-next {
+  position: absolute;
+  z-index: 1000;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ffffff;
+  border-radius: 50%;
+  background-image: url("../img/icon/arrow-slider.svg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  opacity: 0.5; }
+  .slider3 .slider-prev:hover,
+  .slider3 .slider-next:hover {
+    opacity: 1; }
+  .slider3 .slider-prev:active,
+  .slider3 .slider-next:active {
+    opacity: 0.8; }
+  @media screen and (max-width: 1023.33px) {
+    .slider3 .slider-prev,
+    .slider3 .slider-next {
+      display: none; } }
+
+.slider3 .slider-next {
+  right: 0;
+  transform: rotate(180deg) translateY(50%); }
+
 .products .swiper-button-prev,
 .products .swiper-button-next {
   position: relative;
@@ -1749,6 +1809,9 @@ img {
 .products--card .swiper-pagination {
   width: 50px;
   height: 50px; }
+
+.swiper-slide:focus-within {
+  outline: 2px solid red; }
 
 .products {
   position: relative;

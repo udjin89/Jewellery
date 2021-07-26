@@ -69,7 +69,7 @@ const images = () => {
   return gulp.src("source/img/**/*.{jpg,png,svg}")
     .pipe(imagemin([
       imagemin.mozjpeg({ progressive: true }),
-      imagemin.optipng({ optimizationLevel: 3 }),
+      imagemin.optipng({ optimizationLevel: 7 }),
       imagemin.svgo()
     ]))
     .pipe(gulp.dest("build/img"))
@@ -80,7 +80,7 @@ exports.images = images; // Обьявление, для запуска из к�
 // WepB
 const createWebp = () => {
   return gulp.src("source/img/**/*.{jpg,png}")
-    .pipe(webp({ quality: 90 }))
+    .pipe(webp({ quality: 80 }))
     .pipe(gulp.dest("build/img"))
 }
 

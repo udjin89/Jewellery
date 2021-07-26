@@ -55,7 +55,36 @@
 .products .swiper-pagination-bullet-active {
   color: $black;
 }
+.slider3 .slider-prev,
+.slider3 .slider-next{
+  position: absolute;
+  z-index: 1000;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: $white;
+  border-radius: 50%;
+  background-image: url("../img/icon/arrow-slider.svg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  opacity: 0.5;
+  &:hover {
+    opacity: 1;
+  }
 
+  &:active {
+    opacity: 0.8;
+  }
+  @include tablet{
+    display: none;
+  }
+}
+.slider3 .slider-next{
+  right: 0;
+  transform: rotate(180deg) translateY(50%);
+}
 .products .swiper-button-prev,
 .products .swiper-button-next {
   position: relative;
@@ -92,4 +121,8 @@
 .products--card .swiper-pagination {
   width: 50px;
   height: 50px;
+}
+
+.swiper-slide:focus-within{
+  outline: 2px solid red;
 }

@@ -13,6 +13,7 @@ function bindModal(triggerSelector, modalSelector, closeSelector) //  Перед
     modal.classList.remove("modal-show-x");
     body.classList.remove('overflow');
     overlay.classList.add('hidden');
+    focusManager.release(modal);
   }
 
   if (modal) {
@@ -28,6 +29,7 @@ function bindModal(triggerSelector, modalSelector, closeSelector) //  Перед
         const input = modal.querySelector('input');
         input.focus();
         body.classList.add('overflow');
+        focusManager.capture(modal);
       });
     });
 

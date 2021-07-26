@@ -2,7 +2,9 @@ const swiper = new Swiper('.products--main .swiper-container', {
   speed: 400,
   observer: true,
   observeParents: true,
+  initialSlide: 8,
   // spaceBetween: 30,
+  updateOnWindowResize: true,
   loop: true,
 
   // Navigation arrows
@@ -20,10 +22,11 @@ const swiper = new Swiper('.products--main .swiper-container', {
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
+        type: 'bullets',
         type: 'custom',
         renderCustom: function (swiper, current, total) {
           return current + '  of  ' + (total);
-        }
+        },
       },
     },
     768: {
@@ -40,7 +43,6 @@ const swiper = new Swiper('.products--main .swiper-container', {
         },
       },
     },
-    // when window width is >= 640px
     1024: {
       slidesPerView: 4,
       slidesPerGroup: 4,
@@ -97,7 +99,7 @@ const swiper2 = new Swiper('.products--card .swiper-container', {
         type: 'custom',
         renderCustom: function (swiper, current, total) {
           return current + '  of  ' + (total);
-        }
+        },
       },
     },
     768: {
@@ -144,4 +146,16 @@ const swiper2 = new Swiper('.products--card .swiper-container', {
       },
     },
   },
+});
+
+swiper.on('resize', function () {
+  // console.log('RESIZE');
+  swiper.pagination.update();
+  swiper.pagination.render();
+});
+
+swiper2.on('resize', function () {
+  // console.log('RESIZE');
+  swiper.pagination.update();
+  swiper.pagination.render();
 });

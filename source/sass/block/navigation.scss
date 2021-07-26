@@ -10,8 +10,11 @@
   width: 590px;
 
   &--open {
-    margin-left: 0;
-    padding-left: 0;
+    @include tablet{
+      margin-left: 0;
+      padding-left: 0;
+      width: 100%;
+    }
   }
 }
 

@@ -10,6 +10,12 @@
   }
 }
 
+@mixin mobile500 {
+  @media screen and (max-width: $mobile500) {
+    @content;
+  }
+}
+
 @mixin retina {
   @media (min-resolution: 2dppx) {
     @content;

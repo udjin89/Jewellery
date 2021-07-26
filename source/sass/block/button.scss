@@ -70,6 +70,9 @@
     outline: 5px solid $brown;
     outline-offset: -4px;
   }
+  @include mobile{
+    margin-top: 40px;
+  }
 }
 
 .button--filter {

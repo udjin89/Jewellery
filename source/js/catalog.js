@@ -9,12 +9,4 @@ if (options) {
       this.parentNode.classList.toggle('catalog__item--active');
     });
   });
-  optionsList.forEach((elem, index) => {
-
-    elem.addEventListener('keydown', function (evt) {
-      if (evt.key === 'Enter' || evt.key === ' ') {
-        this.parentNode.classList.toggle('catalog__item--active');
-      }
-    });
-  });
 }

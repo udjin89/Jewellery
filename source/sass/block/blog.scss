@@ -53,10 +53,10 @@
   }
 
   &--blog-care {
-    background-image: url("../img/content/jess-harper-sunday-blog-care-desktop.jpg");
+    background-image: url("../img/content/jess-harper-sunday-blog-care-desktop.webp");
 
     @include retina {
-      background-image: url("../img/content/jess-harper-sunday-blog-care-desktop@2x.jpg");
+      background-image: url("../img/content/jess-harper-sunday-blog-care-desktop@2x.webp");
     }
 
     @include tablet {
@@ -64,16 +64,21 @@
     }
 
     @include mobile {
-      background-size: 100% 256px;
+      // background-size: 100% 256px;
+      background-size: cover;
+    }
+
+    @include mobile500{
+      background-size: contain;
     }
   }
 
   &--blog-power {
-    background-image: url("../img/content/alex-holyoake-unsplash-blog-power-desktop.jpg");
+    background-image: url("../img/content/alex-holyoake-unsplash-blog-power-desktop.webp");
     background-position-x: right;
 
     @include retina {
-      background-image: url("../img/content/alex-holyoake-unsplash-blog-power-desktop@2x.jpg");
+      background-image: url("../img/content/alex-holyoake-unsplash-blog-power-desktop@2x.webp");
     }
 
     @include tablet {
@@ -81,36 +86,52 @@
       background-position-x: right;
     }
 
+
+
     @include mobile {
-      background-size: 100% 256px;
+      // background-size: 100% 256px;
+      // background-size: contain;
+      // background-position: top;
+      background-size: cover;
+    }
+
+    @include mobile500{
+      // background-size: cover;
+      background-size: contain;
     }
   }
 
   &--blog-trends {
-    background-image: url("../img/content/alve-odonnell-unsplash-blog-trends-desktop.jpg");
+    background-image: url("../img/content/alve-odonnell-unsplash-blog-trends-desktop.webp");
     background-size: cover;
 
     @include retina {
-      background-image: url("../img/content/alve-odonnell-unsplash-blog-trends-desktop@2x.jpg");
+      background-image: url("../img/content/alve-odonnell-unsplash-blog-trends-desktop@2x.webp");
     }
 
     @include tablet {
       background-size: 50%;
-      background-image: url("../img/content/alve-odonnell-blog-trends-tablet.jpg");
+      background-image: url("../img/content/alve-odonnell-blog-trends-tablet.webp");
 
       @include retina {
         background-size: 50%;
-        background-image: url("../img/content/alve-odonnell-blog-trends-tablet.jpg");
+        background-image: url("../img/content/alve-odonnell-blog-trends-tablet.webp");
       }
     }
 
     @include mobile {
-      background-size: 100% 256px;
-      background-image: url("../img/content/alve-odonnell-blog-trends-mobile.jpg");
+      // background-size: contain;
+      background-size: cover;
+      // background-position: center;
+      background-image: url("../img/content/alve-odonnell-blog-trends-mobile.webp");
 
       @include retina {
-        background-image: url("../img/content/alve-odonnell-blog-trends-mobile@2x.jpg");
+        background-image: url("../img/content/alve-odonnell-blog-trends-mobile@2x.webp");
       }
+    }
+    @include mobile500{
+      // background-size: cover;
+      background-size: contain;
     }
   }
 }
@@ -130,9 +151,9 @@
   margin-top: 13px;
   margin-bottom: 30px;
   padding: 0 40px;
-  overflow: hidden;
+  // overflow: hidden;
   max-width: 275px;
-  max-height: 120px;
+  // max-height: 120px;
 
   @include title;
   font-weight: 600;
@@ -148,8 +169,22 @@
 
   @include mobile {
     padding: 0 60px;
-    max-height: 90px;
+    // max-height: 90px;
     max-width: inherit;
+  }
+  // overflow: hidden;
+
+  &:last-of-type {
+
+    text-overflow: ellipsis;
+    min-width: 285px;
+    overflow: hidden;
+    /* stylelint-disable */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    /* stylelint-enable */
+    // padding-right: 5px;
   }
 }
 
@@ -167,6 +202,7 @@
 
 .blog__article-description {
   padding-top: 68px;
+  padding-bottom: 10px;
   width: 50%;
   height: 300px;
   margin-left: auto;

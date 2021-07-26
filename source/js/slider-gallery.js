@@ -21,11 +21,12 @@ const sliderImages = new Swiper('.slider__images .swiper-container', { // ище
   direction: 'vertical', // вертикальная прокрутка
   slidesPerView: 1, // показывать по 1 изображению
   spaceBetween: 32, // расстояние между слайдами
-  mousewheel: true, // можно прокручивать изображения колёсиком мыши
+  loop: true,
+  //mousewheel: true, // можно прокручивать изображения колёсиком мыши
   // initialSlide: 1,
   navigation: { // задаем кнопки навигации
-    nextEl: '.slider__next', // кнопка Next
-    prevEl: '.slider__prev' // кнопка Prev
+    nextEl: '.slider-next', // кнопка Next
+    prevEl: '.slider-prev' // кнопка Prev
   },
   grabCursor: true, // менять иконку курсора
   thumbs: { // указываем на превью слайдер
@@ -71,16 +72,7 @@ const sliderImages = new Swiper('.slider__images .swiper-container', { // ище
   },
 });
 
-window.addEventListener('resize', event => {
-  if (screen.width < 1024) {
-    // swiper.pagination.destroy();
-    swiper.pagination.update();
-    swiper.pagination.render();
-    swiper2.pagination.update();
-    swiper2.pagination.render();
-
-    // // sliderImages.pagination.destroy();
-    sliderImages.pagination.update();
-    sliderImages.pagination.render();
-  }
-}, false);
+sliderImages.on('resize', function () {
+  sliderImages.pagination.update();
+  sliderImages.pagination.render();
+});
