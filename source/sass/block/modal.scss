@@ -6,7 +6,7 @@
   transform: translateY(-50%);
   left: 0;
   right: 0;
-  max-width: 430px;
+  width: 430px;
   padding: 33px 45px 36px 45px;
   background-color: $light-beige;
 }
@@ -50,6 +50,9 @@
   background-color: transparent;
   border: none;
   border-bottom: 1px solid $black;
+  border-radius: 0;
+  font-size: 16px;
+  font-weight: 500;
 
   &::placeholder {
     font-size: 14px;
@@ -119,7 +122,8 @@
   }
 
   @include mobile {
-    width: 270px;
+    max-width: 270px;
+    min-height: 470px;
     margin: 0 auto 50px auto;
     background-size: 100% 84px;
     padding-top: 120px;

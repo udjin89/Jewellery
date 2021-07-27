@@ -387,7 +387,9 @@ img {
       display: none; } }
 
 .menu--open {
-  margin-top: 100px; }
+  margin-top: 100px;
+  padding-bottom: 100px;
+  width: 100%; }
 
 @media screen and (max-width: 1023.33px) {
   .menu--open,
@@ -1313,7 +1315,7 @@ img {
   transform: translateY(-50%);
   left: 0;
   right: 0;
-  max-width: 430px;
+  width: 430px;
   padding: 33px 45px 36px 45px;
   background-color: #f0eae4; }
 
@@ -1357,7 +1359,10 @@ img {
   line-height: 40px;
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid #1d1613; }
+  border-bottom: 1px solid #1d1613;
+  border-radius: 0;
+  font-size: 16px;
+  font-weight: 500; }
   .modal input::-moz-placeholder {
     font-size: 14px;
     color: #9b9997; }
@@ -1414,7 +1419,8 @@ img {
   @media screen and (max-width: 767.66px) {
     .modal--login,
     .modal--login-static {
-      width: 270px;
+      max-width: 270px;
+      min-height: 470px;
       margin: 0 auto 50px auto;
       background-size: 100% 84px;
       padding-top: 120px;
@@ -1531,13 +1537,15 @@ img {
   grid-row-gap: 30px;
   grid-column-gap: 30px;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 300px minmax(200px, 300px);
+  grid-template-rows: -webkit-min-content -webkit-min-content;
+  grid-template-rows: min-content min-content;
   grid-auto-flow: row; }
   @media screen and (max-width: 1023.33px) {
     .blog__grid {
       grid-auto-flow: row;
       grid-template-columns: 1fr;
-      grid-template-rows: 300px;
+      grid-template-rows: -webkit-min-content;
+      grid-template-rows: min-content;
       grid-row-gap: 50px; } }
   @media screen and (max-width: 767.66px) {
     .blog__grid {
@@ -1546,66 +1554,86 @@ img {
       grid-template-rows: auto; } }
 
 .blog__article {
+  display: flex;
   background-color: #f0eae4;
   background-repeat: no-repeat;
   background-size: contain; }
+  .blog__article--blog-trends {
+    display: grid;
+    grid-template-columns: 1fr 285px;
+    grid-template-rows: 330px -webkit-min-content;
+    grid-template-rows: 330px min-content; }
+  @media screen and (max-width: 1023.33px) {
+    .blog__article--blog-trends {
+      display: flex; } }
   @media screen and (max-width: 767.66px) {
     .blog__article {
-      height: 512px;
-      padding-top: 256px; } }
-  .blog__article--blog-care {
-    background-image: url("../img/content/jess-harper-sunday-blog-care-desktop.webp"); }
+      flex-direction: column; }
+      .blog__article--blog-power {
+        flex-direction: column-reverse; } }
+
+.blog__article-bg {
+  width: 50%;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  @media screen and (max-width: 767.66px) {
+    .blog__article-bg {
+      width: 100%;
+      height: 256px; } }
+  .blog__article-bg--blog-care {
+    background-image: url("../img/content/jess-harper-sunday-blog-care-desktop.webp");
+    background-size: cover; }
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-      .blog__article--blog-care {
+      .blog__article-bg--blog-care {
         background-image: url("../img/content/jess-harper-sunday-blog-care-desktop@2x.webp"); } }
     @media screen and (max-width: 1023.33px) {
-      .blog__article--blog-care {
-        background-size: 50% 300px; } }
-    @media screen and (max-width: 767.66px) {
-      .blog__article--blog-care {
+      .blog__article-bg--blog-care {
         background-size: cover; } }
-    @media screen and (max-width: 500.1px) {
-      .blog__article--blog-care {
-        background-size: contain; } }
-  .blog__article--blog-power {
+    @media screen and (max-width: 767.66px) {
+      .blog__article-bg--blog-care {
+        background-size: cover;
+        background-position: center; } }
+  .blog__article-bg--blog-power {
     background-image: url("../img/content/alex-holyoake-unsplash-blog-power-desktop.webp");
     background-position-x: right; }
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-      .blog__article--blog-power {
+      .blog__article-bg--blog-power {
         background-image: url("../img/content/alex-holyoake-unsplash-blog-power-desktop@2x.webp"); } }
     @media screen and (max-width: 1023.33px) {
-      .blog__article--blog-power {
-        background-size: 50% 300px;
-        background-position-x: right; } }
+      .blog__article-bg--blog-power {
+        background-position: center; } }
     @media screen and (max-width: 767.66px) {
-      .blog__article--blog-power {
+      .blog__article-bg--blog-power {
         background-size: cover; } }
-    @media screen and (max-width: 500.1px) {
-      .blog__article--blog-power {
-        background-size: contain; } }
-  .blog__article--blog-trends {
+  .blog__article-bg--blog-trends {
     background-image: url("../img/content/alve-odonnell-unsplash-blog-trends-desktop.webp");
-    background-size: cover; }
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3; }
     @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-      .blog__article--blog-trends {
+      .blog__article-bg--blog-trends {
         background-image: url("../img/content/alve-odonnell-unsplash-blog-trends-desktop@2x.webp"); } }
     @media screen and (max-width: 1023.33px) {
-      .blog__article--blog-trends {
-        background-size: 50%;
+      .blog__article-bg--blog-trends {
+        height: 300px;
         background-image: url("../img/content/alve-odonnell-blog-trends-tablet.webp"); } }
   @media screen and (max-width: 1023.33px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 1023.33px) and (min-resolution: 2dppx) {
-    .blog__article--blog-trends {
-      background-size: 50%;
+    .blog__article-bg--blog-trends {
       background-image: url("../img/content/alve-odonnell-blog-trends-tablet.webp"); } }
     @media screen and (max-width: 767.66px) {
-      .blog__article--blog-trends {
+      .blog__article-bg--blog-trends {
         background-size: cover;
         background-image: url("../img/content/alve-odonnell-blog-trends-mobile.webp"); } }
   @media screen and (max-width: 767.66px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767.66px) and (min-resolution: 2dppx) {
-    .blog__article--blog-trends {
+    .blog__article-bg--blog-trends {
       background-image: url("../img/content/alve-odonnell-blog-trends-mobile@2x.webp"); } }
     @media screen and (max-width: 500.1px) {
-      .blog__article--blog-trends {
+      .blog__article-bg--blog-trends {
         background-size: contain; } }
 
 .blog__article p {
@@ -1621,7 +1649,7 @@ img {
   margin: 0;
   margin-top: 13px;
   margin-bottom: 30px;
-  padding: 0 40px;
+  overflow: hidden;
   max-width: 275px;
   font-family: "CormorantGaramond", "Arial", sans-serif;
   font-style: normal;
@@ -1632,21 +1660,10 @@ img {
   text-align: center; }
   @media screen and (max-width: 1023.33px) {
     .blog__article h3 {
-      padding: 0 80px;
       max-width: 100%; } }
   @media screen and (max-width: 767.66px) {
     .blog__article h3 {
-      padding: 0 60px;
       max-width: inherit; } }
-  .blog__article h3:last-of-type {
-    text-overflow: ellipsis;
-    min-width: 285px;
-    overflow: hidden;
-    /* stylelint-disable */
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    /* stylelint-enable */ }
 
 .blog__article:nth-child(3n) {
   grid-column-start: 2;
@@ -1662,21 +1679,31 @@ img {
   padding-top: 68px;
   padding-bottom: 10px;
   width: 50%;
-  height: 300px;
   margin-left: auto;
   background-color: #f0eae4; }
   @media screen and (max-width: 767.66px) {
     .blog__article-description {
       padding-top: 49px;
       width: 100%;
-      height: 256px;
-      margin-left: 0; } }
+      margin-left: 0;
+      padding-bottom: 50px; } }
 
 .blog__article:nth-child(3n) .blog__article-description {
-  margin-top: 330px; }
+  width: 100%;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  padding-bottom: 110px; }
   @media screen and (max-width: 1023.33px) {
     .blog__article:nth-child(3n) .blog__article-description {
-      margin-top: 0; } }
+      margin-top: 0;
+      padding-top: 85px;
+      padding-bottom: 90px; } }
+  @media screen and (max-width: 767.66px) {
+    .blog__article:nth-child(3n) .blog__article-description {
+      padding-top: 15px;
+      padding-bottom: 70px; } }
 
 .blog__article:nth-child(2n) .blog__article-description {
   margin-left: 0;
@@ -1690,10 +1717,22 @@ img {
       margin-right: 0; } }
 
 .blog__article--blog-power h3 {
-  padding: 0 60px; }
-  @media screen and (max-width: 1023.33px) {
-    .blog__article--blog-power h3 {
-      padding: 0 90px; } }
+  width: 120px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.blog__article--blog-care h3 {
+  width: 170px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.blog__article--blog-trends h3 {
+  width: 295px;
+  margin-left: auto;
+  margin-right: auto; }
+  @media screen and (max-width: 767.66px) {
+    .blog__article--blog-trends h3 {
+      width: 270px; } }
 
 @media screen and (max-width: 767.66px) {
   .blog__article--blog-trends .blog__article-description {
